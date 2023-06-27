@@ -1,0 +1,106 @@
+body{
+  font-size:20px;
+}
+
+section{
+  width:100%;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.section-heading{
+	color:blue;
+	font-size: 35px;
+}
+
+#about-section{
+  height: auto;
+  width: 100%;
+}
+
+#myPhoto img{
+  height: 220px;
+  width: 220px;
+}
+
+#about-profile{
+ 	color:grey;
+ 	width:80%;
+}
+
+
+#education{
+	width:100%;
+}
+
+#education img{
+	width:1000px;
+	height: 500px;
+}
+
+
+
+/* FAVORITE SECTION */
+
+#favorites{
+  width: 100%;
+  
+}
+
+.col-2 {
+	float: left;
+	width: 45%;
+	margin: 20px;
+	padding:10px;
+}
+
+#favourites img{
+	width:100%;
+	border: 2px dashed darkblue;
+	
+}
+
+#favourites span{
+	margin: 20px;
+}
+section::after{
+	content: "";
+  	clear: both;
+  	display: table;
+}
+
+
+
+
+/* PORTFOLIO SECTION */
+.portfolio-display{
+	margin-bottom: 30px;
+	padding: 0 50px;
+}
+
+#portfolio .col-3{
+	width: 31.7%;
+	margin: 10px;
+  float: left;
+}
+
+.portfolio-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 10px;
+	position: relative;
+}
+
+
+.portfolio-img img{
+  width: 380px;
+  height: 300px;
+}
+
+.portfolio-text{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
