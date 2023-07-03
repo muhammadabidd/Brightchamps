@@ -103,4 +103,62 @@ section::after{
   position: absolute;
   height: 100%;
   width: 100%;
+  
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: transparent;
+  transition: 0.5s;
+  transition-property: all 0.5s ease-in-out;
+}
+
+.portfolio-img:hover .portfolio-text{
+	background-color: lightgray;
+	opacity: 0.8;
+	color: white;
+}
+
+.portfolio-img:hover {
+	box-shadow: 0 0 10px lightgray;
+}
+
+
+
+/* SKILL SECTION */
+
+#skills{
+	width: 100%;
+}
+
+.skills-display{
+	padding: 5px;
+	margin-bottom: 30px;
+}
+
+.skill-progress{
+	width: 30%;
+	height: 50px;
+	background-color: bisque;
+	border-width: 15px;
+	border-color: black;
+	border-radius: 50px;
+	margin: 22px;
+	overflow: hidden;
+	
+}
+
+.skill-name{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.skill-progress>div{
+
+	border-radius: 20px 0px 0px 20px;
+
+}
+
+.skill-name span{
+margin-left: 10px;
+vertical-align: middle;
 }
