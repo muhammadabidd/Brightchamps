@@ -70,3 +70,76 @@
     text-align: center;
 }
 
+#sideNav {
+    width: 150px;
+    height: 100vh;
+    background-color: #1eb300;
+    position: fixed;
+    top: 0;
+    right: -250px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#menuBtn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    background-color: #1eb300;
+    cursor: pointer;
+    text-align: center;
+    /* border-color: white;
+    border-width: 1px; */
+    border-radius: 3px;
+}
+
+#menuBtn img{
+    width: 35px;
+    margin-top: 6px;
+
+}
+
+
+
+/* BUAT JUDUL */
+
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+    margin-bottom: 25px;
+}
+
+.title-text p{
+    margin: 40px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.contents {
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    display: block;
+    background: linear-gradient(white, #ECFFDC);
+    padding: 25px;
+}
+
+.title-text h1{
+    font-size: 30px;
+    color: #1eb300;
+    margin-top: 20px;
+}

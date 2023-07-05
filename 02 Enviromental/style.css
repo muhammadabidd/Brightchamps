@@ -83,6 +83,8 @@
     right: 0;
     background-color: #1eb300;
 
+
+    /* BUAT NANTI */
     right: -250px;
     /* 
     z-index: 2;
@@ -123,8 +125,6 @@ nav ul li a {
 
 
 /* -----TITLE TEXT----- */
-
-
 .title-text{
     text-align: center;
     padding-bottom: 70px;
@@ -136,6 +136,8 @@ nav ul li a {
     font-size: 40px;
     color: black;
     font-weight: bold;
+
+    /* untuk nanti */
     position: relative;
     display: inline-block;
 }
@@ -148,7 +150,7 @@ nav ul li a {
     display: block;
     background: linear-gradient(white, #ECFFDC);
     padding: 25px;
-    /* position: relative; */
+
     /* z-index: 1; */
 
 }
@@ -300,5 +302,142 @@ nav ul li a {
 }
 
 
+.impact-description{
+    width: 80%;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
 
+    /* AFTER HOVERING */
+    opacity: 0;
+    transition: 1s;
+    margin-top: -40px;
+}
+
+.impact-description p {
+    font-size: 16px;
+}
+
+
+.single-impact:hover .impact-description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+
+/* -----TESTIMONIAL----- */
+
+#testimonial {
+    width: 100%;
+    padding: 70px 0 ;
+
+}
+
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.testimonial-col{
+    flex-basis: 28%;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #7fbf7f;
+
+    /* FOR TRANSFORMING */
+    transition: transform 0.5s;
+}
+
+.testimonial-col p{
+    font-size: 17px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.user-info .fa {
+    margin: 10px;
+    color: blue;
+    font-size: 20px;
+}
+
+.user-info small{
+    color: blue;
+}
+
+.testimonial-col:hover{
+    transform:translateY(-12px)
+}
+
+#footer{
+    padding: 10px 0 20px;
+    background:  #e4e1e1;
+    position: relative;
+  }
+
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer-right{
+    text-align: right;
+    
+  }
+
+  .footer-row h1{
+    margin: 2px 0;
+  }
+  .footer-row p{
+    line-height: 35px;
+    
+  }
+
+  /* footer-left .fa {
+    font-size: 20px;
+    color: #1ca700;
+    margin: 10px;
+    
+    } */
+
+    /* .footer-right .fa {
+        font-size: 20px;
+      color: #1ca700;
+      margin: 10px;
+      } */
+
+
+      .footer-img{
+        max-width: 370px;
+        opacity: 0.3;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%)
+        }
