@@ -41,3 +41,11 @@
 }
 
 
+.section-heading{
+    padding-left: 25%;
+    background-color: white;
+    margin: 12px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
