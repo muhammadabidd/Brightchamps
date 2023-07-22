@@ -3,24 +3,25 @@
     margin: 0;
 }
 
+
 .body-header{
     background-color:#081849;
     width: 100%;
     height: 15%;
-}
+} 
 
 #logo img{
 	width: 50px;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     margin: 12px;
 }
 
 #logo-name{
-    color: #fafafa;
+     color: #fafafa;
     font-size: 40px;
     font-weight: bold;
     margin: 12px;
-}
+} 
 
 #logo{
     display: flex;
@@ -36,7 +37,7 @@
     padding-top: 120px;
     padding-bottom: 120px;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
 }
 
 
