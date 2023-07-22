@@ -114,18 +114,17 @@ nav ul li a{
 
 /* BUAT JUDUL */
 
-.title-text{
+.title-text {
     text-align: center;
     padding-bottom: 70px;
     margin-bottom: 25px;
 }
 
-.title-text p{
+.title-text p {
     margin: 40px;
     font-size: 40px;
     color: black;
     font-weight: bold;
-    position: relative;
 }
 
 .contents {
@@ -134,12 +133,71 @@ nav ul li a{
     color: black;
     font-weight: bold;
     display: block;
-    background: linear-gradient(white, #ECFFDC);
+    background: linear-gradient(white, rgb(218, 240, 218));
     padding: 25px;
 }
 
-.title-text h1{
+
+.title-text h1 {
     font-size: 30px;
     color: #1eb300;
     margin-top: 20px;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.features{
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features span {
+    text-align: left;
+    margin: 10px;
+    font-weight: 100;
+    font-size: 30px;
+    color: #1eb300;
+
+}
+
+.features-icon .fas{
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    border-radius: 8px;
+    line-height: 50px;
+    color: green;
+    padding-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 25px;
+    margin-left: -100px;
+}
+
+.features-icon .fab{
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    border-radius: 8px;
+    line-height: 50px;
+    color: green;
+    padding-left: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
+    margin-left: -100px;
 }

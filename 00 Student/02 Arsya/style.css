@@ -169,25 +169,170 @@ html {
     width: 100%;
     padding: 10px 0;
     background-color: rgb(207, 196, 196);    
-    }
-
-.ImpactEnvironment-box{
+  }
+  
+  .ImpactEnvironment-box{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: auto;
-}
-
-.single-impact{
+  }
+  
+  
+  .single-impact{
     flex-basis: 48%;
     text-align: center;
     margin-bottom: 20px;
     color: white;
     height: 270px;
-}
-
-.single-impact img {
+  }
+  
+  .single-impact img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+  } 
+  
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background : linear-gradient(white, cyan);
+  opacity: 0%;
+  margin-top: -274px;
+  transition: 1s;
+}
+
+.single-impact:hover .overlay{
+  opacity: 1;
+}
+
+.impact-description{
+  width: 80%;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: 1s;
+  margin-top: -40px;
+}
+
+.impact-description p {
+  font-size: 16px;
+}
+
+.single-impact:hover .impact-description{
+  bottom: 40%;
+  opacity: 1;
+}
+
+/* TESTIMONIAL */
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+
+
+.testimonial-row{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+
+.testimonial-col{
+  flex-basis: 28%;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #7fbf7f;
+
+  transition: transform 0.5s  ;
+}
+
+
+.testimonial-col p{
+  font-size: 17px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user img{
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 100px;
+
+}
+
+.user-info .fab {
+  margin: 10px;
+  color: rgb(158, 158, 236);
+  font-size: 20px;
+}
+
+.user-info small{
+  color: blue;
+}
+
+.testimonial-col:hover{
+  transform:translateY(-12px)
+}
+
+
+
+#footer{
+  padding: 10px 0 20px;
+  background:  #e4e1e1;
+  position: relative;
+}
+
+.footer-row{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.footer-right, .footer-left{
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.footer-right{
+  text-align: right;
+  
+}
+
+.footer-row h1{
+  margin: 2px 0;
+}
+.footer-row p{
+  line-height: 35px;
+  
+}
+
+.footer-img{
+  max-width: 370px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform : translate(-50%, -50%)
 }

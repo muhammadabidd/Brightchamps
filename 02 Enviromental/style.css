@@ -386,10 +386,13 @@ nav ul li a {
     transform:translateY(-12px)
 }
 
+
+
 #footer{
     padding: 10px 0 20px;
     background:  #e4e1e1;
     position: relative;
+
   }
 
 .footer-row{
