@@ -293,6 +293,8 @@ nav ul li a {
     cursor: pointer;
     background : linear-gradient(white, cyan);
     opacity: 0;
+
+
     transition: 1s;
     margin-top: -274px;
 }
@@ -301,7 +303,7 @@ nav ul li a {
     opacity: 1;
 }
 
-
+/* BATES 24 JULY */
 .impact-description{
     width: 80%;
     position: relative;
