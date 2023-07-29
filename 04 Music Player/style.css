@@ -72,3 +72,13 @@
     transform: scale (1.1);
 }
 
+.play-song {
+    position : relative;
+    overflow: hidden;
+    height: 150px;
+    width: 250px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 34px;
+}
+
