@@ -62,7 +62,7 @@
   margin : 10px;
   border : 2px solid white ;
   border-radius: 20px;
-  overflow: hodden;
+  overflow: hidden;
   transition: 0.5s ease-in-out
 }
 
@@ -78,7 +78,7 @@
 
 .hover-effect div:hover{
     opacity : 1.0;
-    transform: scale (1.1);
+    transform: scale(1.1);
 }
 
 .play-song {
@@ -162,7 +162,35 @@
     transition: 0.5s ease-out;
   }
 
-  .artist-image a{
+.artist-image a{
     text-decoration: none;
-  }
+}
 
+
+.song-tile{
+    box-shadow: 3px 3px 3px #5eb6e9;
+    border:2px solid white;
+    border-radius: 5px;
+    height: 150px;
+    width: 140px;
+    padding: 5px; 
+    margin: 10px; 
+    position: relative;
+}
+
+.song-tile-image img{
+	width: 100%;
+	height: 100%; }
+
+.song-tile-image{
+	height: 70%;
+	width: 100%;}
+
+    .song-tile h3, h4{
+        font-size: 14px;
+        color: white;
+        margin:0px;
+        text-align: left;  }
+
+        .song-tile h4{
+            margin-left: 0px;}
