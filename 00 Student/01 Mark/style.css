@@ -281,3 +281,55 @@ nav ul li a{
     bottom: 40%;
     opacity: 1;
 }
+
+/* -----TESTIMONIAL----- */
+
+#testimonial {
+    width: 100%;
+    padding: 70px 0 ;
+
+}
+
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.testimonial-col{
+    flex-basis: 28%;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #7fbf7f;
+
+    transition: transform 0.5s;
+}
+
+.testimonial-col p{
+    font-size: 17px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.user-info small{
+    color: blue;
+}
+
+.testimonial-col:hover{
+    transform:translateY(-12px)
+}
