@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+
+    <p id="description">Please fill this form with all the necessary <sup> arsya suka makan</sup> fields marked with <sup>*</sup> <br> to let us know the courses you are interested in.<sub> You may choose multiple courses.</sub></p>  
+
+
+    <form action="">
+        <div>
+            <label for="name" id="name-label"> Nama</label>
+            <br>
+            <input type="text" placeholder="NAMALU CUY">
+
+            
+        </div>
+
+
+        <div>
+            <label for="email" id="email-label">Email:</label><br>
+            <input class="input-elm" type="email" name="email" id="email" required placeholder="EMAIL LU DONG">
+        </div>
+
+        <div>
+            <label for="number" id="number-label">Age:</label><br>
+            <input class="input-elm" type="number" name="age" id="number" max="40" min="18" placeholder="Your Age">
+        </div>
+
+          
+        <div>
+            <label for="dropdown">Which one of these best describes your occupation?</label><br>
+            <select class="select-elm" name="occupation" id="dropdown">
+              <option value="full_time_job">Full-time Job</option>
+              <option value="part_time_job">Part-time Job</option>
+              <option value="freelancer">Freelancer</option>
+              <option value="teacher">Teacher</option>
+              <option value="student">Student</option>
+              <option value="no_say">Prefer not to say</option>
+            </select>
+        </div>
+
+
+        <div>
+          <div>Pertanyaannya adalah, pilih salah satu di bawah ini?</div>
+
+          <ul>
+            <li class="list-items">
+              <input class="input-elm input-radio" name="likely" value="1" id="radio-1" type="radio">
+              <label for="">Sangat Setuju</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-radio" name="likely" value="2" id="radio-1" type="radio">
+              <label for="">Setuju</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-radio" name="likely" value="3" id="radio-1" type="radio">
+              <label for="">Kurang Setuju</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-radio" name="likely" value="4" id="radio-1" type="radio">
+              <label for="">Tidak Setuju</label>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div>
+          <div>Kursus apa saja yang anda ikuti</div>
+
+          <ul>
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-1" type="checkbox">
+              <label for="">Data Science</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-2" type="checkbox">
+              <label for="">Python</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-3" type="checkbox">
+              <label for="">Matematika</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-4" type="checkbox">
+              <label for="">Fisika</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-5" type="checkbox">
+              <label for="">Olahraga</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-6" type="checkbox">
+              <label for="">Koding</label>
+            </li>
+
+            <li class="list-items">
+              <input class="input-elm input-checkbox"  value="html5" id="checkbox-7Í" type="checkbox">
+              <label for="">Taekwondo</label>
+            </li>
+
+
+          </ul>
+        </div>
+      
+
+    </form>
+
+
+</body>
+</html>
