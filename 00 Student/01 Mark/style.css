@@ -284,50 +284,55 @@ nav ul li a{
 
 /* -----TESTIMONIAL----- */
 
-#testimonial {
+#testimonial{
     width: 100%;
-    padding: 70px 0 ;
-
+    padding: 70px 0;
 }
 
-.testimonial-row{
+.testimonial-row {
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.testimonial-col{
+.testimonial-col {
     flex-basis: 28%;
     cursor: pointer;
     padding: 10px;
-    margin-bottom: 30px;
-    border-radius: 5px;
     box-shadow: 0 10px 20px 3px #7fbf7f;
 
     transition: transform 0.5s;
+    
 }
 
 .testimonial-col p{
     font-size: 17px;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     margin: 20px 0;
+    justify-content: center;
+    
 }
 
 .user img{
     width: 40px;
-    margin-right: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
+    margin-right: 10px;
 }
 
 .user-info small{
-    color: blue;
+    color: skyblue;
+}
+
+.user-info .fab {
+    margin: 10px;
+    color: skyblue;
+    font-size: 20px;
 }
 
 .testimonial-col:hover{
