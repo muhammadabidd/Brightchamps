@@ -1,0 +1,20 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+
+*{
+    margin: 0;
+}
+
+#MainPage{
+    padding-top: 70px;
+    padding-left: 70px;
+    background: rgb(37, 210, 170);
+    margin: 0;
+
+    .container{
+        display: flex;
+        gap: 20px;
+    }
+}

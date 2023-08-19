@@ -23,7 +23,7 @@ h2{
     text-align: center;
 }
 
-.clockdisplay{
+#clockdisplay{
     font-family: 'Stick No Bills', sans-serif;
     font-size: 50px;
     border-width: 2px;
@@ -34,6 +34,6 @@ h2{
     transition: 0.3s;
 }
 
-.clockdisplay:hover{
+#clockdisplay:hover{
     font-size: 55px;
 }
