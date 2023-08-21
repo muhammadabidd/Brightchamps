@@ -5,6 +5,9 @@ function load() {
     var operators = ['+', '-', 'x', '÷' ];
     var inputScreen = document.querySelector('#screen');
     var input
+    var decimalAdded = false
+    
+
 
     for(var i=0; i<buttons.length; i++){
 
@@ -17,6 +20,7 @@ function load() {
             switch(btnvalue){
                 case 'C':
                     inputScreen.innerHTML  = '';
+                    decimalAdded = false;
                     break;
                 case '=':
                     var lastChar = input[input.length - 1];
@@ -27,13 +31,24 @@ function load() {
 
                     input = input.replace('x', '*').replace('÷', '/');
                     inputScreen.innerHTML = eval(input);
+                    decimalAdded = false
                     break;
+                case '.':
+               
+                    if (decimalAdded == false){
+                        inputScreen.innerHTML += btnvalue;
+                        decimalAdded = true;
+
+                        break;
+                    }
+                    break;
+                    
                 case '+':
                 case '-':
                 case 'x':
                 case '÷':
                     var lastChar = input[input.length - 1];
- 
+                    decimalAdded = false;
                     if (operators.includes(lastChar) && input != ''){
                         inputScreen.innerHTML = input.slice(0,-1)
                         inputScreen.innerHTML +=btnvalue
@@ -48,6 +63,8 @@ function load() {
                         inputScreen.innerHTML +=btnvalue
                         break;
                     }
+
+
                     
 
                 default:
