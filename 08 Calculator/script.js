@@ -9,14 +9,21 @@ function load() {
     var btnValue;
     var input;
 
+
     for(var i=0; i< btns.length; i++) {
 
         var decimalAdded = false; // Flag used to avoid two decimal
 
-        btns[i].addEventListener('click', function () {
 
+        btns[i].addEventListener('click', function () {
+            console.log( 'Button cliked :')
+            console.log(this)
+ 
             btnValue = this.innerHTML;
+            console.log('inner value :' + btnValue)
+
             input = inputScreen.innerHTML;
+            console.log('input screen value before updated : '+input)
 
             switch (btnValue) {
                 case 'C':
@@ -54,6 +61,7 @@ function load() {
                 case '÷':
                     // Last char of string
                     var lastChar = input[input.length - 1];
+                    console.log('last char :' +  lastChar)
                     // Only add operator if input is not empty and there is no operator at the last
                     if(input != '' && !operators.includes(lastChar))
                         inputScreen.innerHTML += btnValue;
@@ -74,3 +82,5 @@ function load() {
         });
     }
 }
+
+console.log(eval(1+1*3/3))
