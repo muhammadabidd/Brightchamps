@@ -33,11 +33,21 @@ foodx = random.randrange(0,width - 10)//10 * 10
 foody = random.randrange(0,height - 10)//10 * 10
 print(foodx, foody)
 
+score = 0
+
 
 # Defining snake function
 def the_snake(snake_list):
     for snake_body in snake_list:
         pygame.draw.rect(dis, 'blue', [snake_body[0], snake_body[1], 10, 10])
+
+
+# Score text
+font_style = pygame.font.SysFont("bahnschrift", 25)
+score_font = pygame.font.SysFont("comicsansms", 35)
+def message(msg, color):
+    mesg = font_style.render(msg, True, color)
+    dis.blit(mesg, (20,20))
 
 
 while running:
@@ -72,8 +82,15 @@ while running:
     y_pos = y_pos + y_speed
     # time.sleep(0.2)
 
+    # If touches the edge
+    if x_pos >= width or x_pos <= 0 or y_pos >= height or y_pos <= 0:
+        running = False
+
+
+
     # Draw background
     dis.fill('white')
+    message('Score : {}'.format(score), 'blue')
 
     # Creating food
     pygame.draw.rect(dis, 'green', (foodx, foody, 10,10))
@@ -85,8 +102,15 @@ while running:
     snake_head.append(y_pos)
     snake_list.append(snake_head)
 
+
     # Running the snake function
     the_snake(snake_list)
+
+
+    # set so that it doesnt touch its body
+    for i in snake_list[:-1]:
+        if snake_head == i:
+            running = False
 
     # Delete the last tail
     if len(snake_list) > snake_len:
@@ -100,14 +124,12 @@ while running:
 
         snake_len = snake_len + 1
         print(foodx, foody)
+        score = score + 1
 
 
 
 
     pygame.display.update()
-    # If touches the edge
-    if x_pos >= width or x_pos <= 0 or y_pos >= height or y_pos <= 0:
-        running = False
     clock.tick(fps)
 
 pygame.quit()
