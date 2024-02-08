@@ -13,7 +13,7 @@ start.onclick = function(){
     if (running == false) {
         running = true;
         console.log(running)
-        console.log('ini tombol start')
+
         count();
     }
 }

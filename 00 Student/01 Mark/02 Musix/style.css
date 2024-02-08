@@ -8,12 +8,18 @@ html{
 
 body{
     display: flex;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 #Navigation{
     width: 200px;
     background: rgb(175, 137, 211);
     height: 100vh;
+    padding-top: 50px;
 
     .single-song{
         display: flex;
@@ -27,6 +33,7 @@ body{
         border-radius: 50%;
     }
 
+
 }
 
 
@@ -34,4 +41,32 @@ body{
 #Main{
     flex: 1;
     background: rgb(144, 192, 144);
+    padding-left: 50px;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+
+#PopularAlbum {
+    .content{
+        display: flex;
+        gap: 30px;
+        overflow-x: scroll;
+
+        .single-album{
+           
+           
+        }
+
+        .single-album img{
+            border-radius: 10px;
+            animation: 0.2s;        }
+
+        .single-album img:hover{
+            width: 300px;
+            height: 300px;
+        }
+
+    }
+    
 }
