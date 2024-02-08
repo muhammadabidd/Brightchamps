@@ -3,14 +3,17 @@ import time
 
 pygame.init()
 
+# Background Setup
 dis_width = 500
 dis_height = 400
- 
-dis = pygame.display.set_mode((dis_width, dis_height))
 
+# Game Setup 
+dis = pygame.display.set_mode((dis_width, dis_height))
+clock = pygame.time.Clock()
 pygame.display.set_caption('Snake Game')
 
 running = True
+
 
 
 # Snake Value Variable
@@ -50,7 +53,7 @@ while running:
 
     x_pos = x_pos + x_speed
     y_pos = y_pos + y_speed
-    time.sleep(0.2)
+    # time.sleep(0.2)
 
     dis.fill('white')
 
