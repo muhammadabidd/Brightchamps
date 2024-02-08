@@ -1,5 +1,6 @@
 import pygame
 import time
+import random
 
 pygame.init()
 
@@ -11,7 +12,7 @@ dis_height = 400
 dis = pygame.display.set_mode((dis_width, dis_height))
 clock = pygame.time.Clock()
 pygame.display.set_caption('Snake Game')
-
+fps = 10
 running = True
 
 
@@ -23,8 +24,24 @@ y_pos = dis_height/2
 x_speed = 10
 y_speed = 0
 
+snake_list = []
+snake_len = 3
+
+width = 500
+height = 400
+foodx = random.randrange(0,width - 10)//10 * 10
+foody = random.randrange(0,height - 10)//10 * 10
+print(foodx, foody)
+
+
+# Defining snake function
+def the_snake(snake_list):
+    for snake_body in snake_list:
+        pygame.draw.rect(dis, 'blue', [snake_body[0], snake_body[1], 10, 10])
+
 
 while running:
+
 
     for event in pygame.event.get():
         print(event)
@@ -50,15 +67,48 @@ while running:
                 x_speed = 0
                 y_speed = 10
 
-
+    # make the snake run every frame
     x_pos = x_pos + x_speed
     y_pos = y_pos + y_speed
     # time.sleep(0.2)
 
+    # Draw background
     dis.fill('white')
 
-    pygame.draw.rect(dis, 'blue', (x_pos, y_pos, 15,15))
+    # Creating food
+    pygame.draw.rect(dis, 'green', (foodx, foody, 10,10))
+
+
+    # Defining the position of snake head each time
+    snake_head = []
+    snake_head.append(x_pos)
+    snake_head.append(y_pos)
+    snake_list.append(snake_head)
+
+    # Running the snake function
+    the_snake(snake_list)
+
+    # Delete the last tail
+    if len(snake_list) > snake_len:
+        del snake_list[0]
+
+
+    #Updating the food after eaten
+    if x_pos == foodx and y_pos == foody:
+        foodx = random.randrange(0,width - 10)//10 * 10
+        foody = random.randrange(0,height - 10)//10 * 10
+
+        snake_len = snake_len + 1
+        print(foodx, foody)
+
+
+
+
     pygame.display.update()
+    # If touches the edge
+    if x_pos >= width or x_pos <= 0 or y_pos >= height or y_pos <= 0:
+        running = False
+    clock.tick(fps)
 
 pygame.quit()
 
