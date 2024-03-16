@@ -10,5 +10,17 @@ public class Class01 {
         String text2 = "Muhammad Abid asdlkasjdlaksjdalksdj";
         
         System.out.println(text1 + text2);
+
+        float num = 3.13f;
+        System.out.println(num);
+
+        double num2 =  0.23;
+        System.out.print(num2);
+
+
+
+
+
+        
     }
 }
