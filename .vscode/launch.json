@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Class01",
+      "request": "launch",
+      "mainClass": "Class01",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "<unnamed_class$01 Arsya Java 01>",
+      "request": "launch",
+      "mainClass": "<unnamed_class$01 Arsya Java 01>",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "MyClass",
       "request": "launch",
       "mainClass": "MyClass",
