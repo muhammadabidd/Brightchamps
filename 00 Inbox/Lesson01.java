@@ -1,4 +1,4 @@
-public class Class01 {
+public class Lesson01 {
     public static void main(String args[]) {
         String text = "Halo semuanya, hari ini saya belajar java";
         

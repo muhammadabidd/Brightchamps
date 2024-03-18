@@ -15,7 +15,7 @@ class Marksheet{
 
 
 
-public class OOP_Java {
+public class Lesson03 {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 

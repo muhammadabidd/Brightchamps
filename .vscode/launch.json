@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson04",
+      "request": "launch",
+      "mainClass": "Lesson04",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "OOP_Java",
       "request": "launch",
       "mainClass": "OOP_Java",
