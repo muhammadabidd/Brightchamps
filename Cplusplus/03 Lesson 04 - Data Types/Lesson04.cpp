@@ -19,13 +19,5 @@ int main (){
     cout << MyString<<" with the size of "<< sizeof(MyString)<< "Byte"<< endl;
     
 
-
-
-
-    
-
-
- 
-
     return 0;
 }
