@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Arsya06",
+      "request": "launch",
+      "mainClass": "Arsya06",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Lesson08_WhileLoopsCheckPrime",
       "request": "launch",
       "mainClass": "Lesson08_WhileLoopsCheckPrime",
