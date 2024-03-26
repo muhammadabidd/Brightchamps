@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 import java.util.Scanner;
 
 public class Lesson04_01{
@@ -22,6 +22,7 @@ public class Lesson04_01{
              System.out.println("The Number You Have Entered is ODD!");
         }
         
+        s.close();
         
     }
 }

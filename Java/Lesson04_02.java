@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 import java.util.Scanner;
 
 public class Lesson04_02{
@@ -6,7 +6,7 @@ public class Lesson04_02{
     {
         // 1. program to find out the largest number to implement if-else 
         
-        Scanner s= new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         
         System.out.println("Enter first number ");
         int a= s.nextInt();
@@ -33,5 +33,7 @@ public class Lesson04_02{
         System.out.println ("The greatest Number is "+c); 
     }
         
+
+    s.close();
     }
 }
