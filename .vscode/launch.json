@@ -3,6 +3,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson08_WhileLoop",
+      "request": "launch",
+      "mainClass": "Lesson08_WhileLoop",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson07_ForLoopsPattern",
+      "request": "launch",
+      "mainClass": "Lesson07_ForLoopsPattern",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson07_ForLoopsFactorial",
+      "request": "launch",
+      "mainClass": "Lesson07_ForLoopsFactorial",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson07_ForLoops",
+      "request": "launch",
+      "mainClass": "Lesson07_ForLoops",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson06_Ternary2",
+      "request": "launch",
+      "mainClass": "Lesson06_Ternary2",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson06_Ternary",
+      "request": "launch",
+      "mainClass": "Lesson06_Ternary",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Arsya05",
       "request": "launch",
       "mainClass": "Arsya05",
