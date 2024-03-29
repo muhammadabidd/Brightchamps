@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson07_ArsyaGanteng",
+      "request": "launch",
+      "mainClass": "Lesson07_ArsyaGanteng",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Arsya06",
       "request": "launch",
       "mainClass": "Arsya06",
