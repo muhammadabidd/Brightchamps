@@ -1,10 +1,7 @@
 import java.util.Scanner;
 
 
-class Student{
-    String name, hobby;
-    int umur;
-}
+
 
 
 
@@ -36,4 +33,9 @@ public class Arsya03 {
     }
     
 
+}
+
+class Student{
+    String name, hobby;
+    int umur;
 }
