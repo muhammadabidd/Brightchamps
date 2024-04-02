@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson11_Arsya",
+      "request": "launch",
+      "mainClass": "Lesson11_Arsya",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson11_RecursiveFunction",
+      "request": "launch",
+      "mainClass": "Lesson11_RecursiveFunction",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Lesson10_Function_PrimePalindrom",
       "request": "launch",
       "mainClass": "Lesson10_Function_PrimePalindrom",
