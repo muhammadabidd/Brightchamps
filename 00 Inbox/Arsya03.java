@@ -1,10 +1,5 @@
 import java.util.Scanner;
 
-
-
-
-
-
 public class Arsya03 {
     public static void main(String[] args) {
         Scanner pembacainput = new Scanner(System.in);

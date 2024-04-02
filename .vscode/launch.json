@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson10_Function_PrimePalindrom",
+      "request": "launch",
+      "mainClass": "Lesson10_Function_PrimePalindrom",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson10_Function_Palyndrome",
+      "request": "launch",
+      "mainClass": "Lesson10_Function_Palyndrome",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson10_Function",
+      "request": "launch",
+      "mainClass": "Lesson10_Function",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson09_Guess",
+      "request": "launch",
+      "mainClass": "Lesson09_Guess",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "Lesson09_DoWhile",
+      "request": "launch",
+      "mainClass": "Lesson09_DoWhile",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Lesson08_Arsya",
       "request": "launch",
       "mainClass": "Lesson08_Arsya",
