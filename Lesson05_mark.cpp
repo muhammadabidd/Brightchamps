@@ -4,29 +4,18 @@ using namespace std;
 
 int main(){
 
-
-    int a = 12;
-    int b = 4 ;
-
-    
-
-    cout << "The value of A is : " << a << endl;
-    cout << "The value of B is : " << b << endl;
+    int angka;
+    cout << "please insert your name" << endl;
+    cin >> angka;
 
 
-    cout << "ARTIMATHIC OPERATOR" <<   endl;
-    cout << "a + b = " << a + b << endl;
+    if (angka <= 10 ){
+        cout << "This is less than 10"<< endl;
+    }
+    else if (angka <= 30){
+        cout << "This is less than 30" << endl;
+    }
 
-    cout << "The value after increment :"<< ++a <<endl;  // a = a + 1
-    b = b + 1;
-    cout << "Its the same as b = b + 1 = "<< b <<  endl;
-
-
-
-
-   cout << "COMPARISON OPERATOR" <<   endl;
-   cout << "a > b is : "<< (a > b) << endl;
-   cout << "a => b is : "<< (a >= b) << endl;   // 1 is true, 0 is false
 
 
 
