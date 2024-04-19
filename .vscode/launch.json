@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Arsya_Lesson10_Palindrome",
+      "request": "launch",
+      "mainClass": "Arsya_Lesson10_Palindrome",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Lesson01",
       "request": "launch",
       "mainClass": "Lesson01",
