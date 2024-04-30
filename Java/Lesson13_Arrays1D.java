@@ -1,4 +1,4 @@
-public class Lesson12_Arrays1D {
+public class Lesson13_Arrays1D {
     public static void main(String args[]) {
         System.out.println("array 1");
         String StringArr1[]=new String [6];//declaration and instantiation  

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lesson12_arrays_operation {
+public class Lesson13_arrays_operation {
 
 
     public String itemName[] ;

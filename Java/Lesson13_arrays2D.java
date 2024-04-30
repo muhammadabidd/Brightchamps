@@ -1,4 +1,4 @@
-public class Lesson12_arrays2D {
+public class Lesson13_arrays2D {
     public static void main(String[] args) {
         System.out.println("First Array");
         

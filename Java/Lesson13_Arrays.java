@@ -1,4 +1,4 @@
-public class Lesson12_Arrays {
+public class Lesson13_Arrays {
 
     public static void main(String[] args) {
         
