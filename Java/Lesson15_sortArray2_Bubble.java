@@ -1,4 +1,4 @@
-public class Lesson15_sortArray2 {
+public class Lesson15_sortArray2_Bubble {
     
 
     public static void main(String[] args) {
