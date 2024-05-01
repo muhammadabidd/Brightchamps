@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson15_SortingMethods",
+      "request": "launch",
+      "mainClass": "Lesson15_SortingMethods",
+      "projectName": "Brightchamps_94d38d61"
+    },
+    {
+      "type": "java",
       "name": "Arsya_Lesson10_Palindrome",
       "request": "launch",
       "mainClass": "Arsya_Lesson10_Palindrome",
