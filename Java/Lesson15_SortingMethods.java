@@ -16,5 +16,7 @@ public class Lesson15_SortingMethods {
         }
 
 
+        System.out.println("test");
+
     }
 }
