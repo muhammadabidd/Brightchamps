@@ -1,6 +1,6 @@
-            if (array[i] > array[i+j]){
-                int temp = array[i];
-                array[i] = array[i+1];
-                array[i+1] = temp;
 
-            }
+        // System.out.println(Math.max(firstnumber, secondnumber));
+        // System.out.println(Math.max(firstnumber, secondnumber));
+        // System.out.println(Math.max(firstnumber, secondnumber));
+        // System.out.println(Math.max(firstnumber, secondnumber));
+        // System.out.println(Math.max(firstnumber, secondnumber));

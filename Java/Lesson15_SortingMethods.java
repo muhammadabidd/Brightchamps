@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+// import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Lesson15_SortingMethods {
@@ -15,6 +15,8 @@ public class Lesson15_SortingMethods {
             System.out.println(numbers[i]);
         }
 
+
+        System.out.println("test");
 
     }
 }
