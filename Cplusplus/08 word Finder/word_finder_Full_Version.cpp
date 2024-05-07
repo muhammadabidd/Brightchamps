@@ -20,7 +20,7 @@ int main() {
             cin>>replaceword;
             cout<<" how many character you want to replace must >= to "<<wordfind.length()<<endl;
             cin>>number;
-            record.replace(position,number,replaceword);
+            record.replace( position,number,replaceword);
             cout<<" word replaced succesfully"<<endl;
             cout<<"updated record is :"<<record<<endl;
         }
