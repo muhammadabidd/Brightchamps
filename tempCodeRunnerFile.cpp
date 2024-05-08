@@ -1,2 +1,1 @@
-
-
+out << "contoh, kata ada di index : " << my_message.find("ini") << endl;
