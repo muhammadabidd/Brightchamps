@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <header>        
+    <header style="position: fixed; background-color: rgb(253, 253, 253);  top: 0; left: 0px; right: 0px">        
 
         <nav>
             <div style="display: flex; justify-content: space-around; "  >
@@ -15,11 +15,17 @@
         
         
                 <ul style="display: flex; gap: 15px;">
-                    <li style="list-style: none;">Home</li>
-                    <li style="list-style: none;">About</li>
-                    <li style="list-style: none;">Service</li>
-                    <li style="list-style: none;">our Menu</li>
-                    <li style="list-style: none;">Testimonials</li>
+                    <a href="#HOME" style="text-decoration: none;">  <li style="list-style: none;">Home</li> </a>
+                    
+                    <a href="#ABOUT" style="text-decoration: none;"><li style="list-style: none;">About</li></a>
+                    
+                    <a href="#SERVICE" style="text-decoration: none;"><li style="list-style: none;">Service</li></a>
+                    <a href="#MENU" style="text-decoration: none;"><li style="list-style: none;">our Menu</li></a>
+                    <a href="#TESTIMONIAL" style="text-decoration: none;"><li style="list-style: none;">Testimonials</li></a>
+
+                    
+                    
+                    
                 </ul>
     
             </div>
@@ -29,8 +35,8 @@
 
 
 
-    <section class="home">
-        <div class="home" style="display: grid; grid-template-columns: 1fr 1fr ;">
+    <section class="home id="HOME" >
+        <div class="home" style="display: grid; grid-template-columns: 1fr 1fr ; margin-top: 100px;">
     
             <div class="home-left" >
                 <h2 style="text-align: center;">we have faster safe delivery</h2>
@@ -52,7 +58,7 @@
 
 
 
-    <section class="about">
+    <section class="about" id="ABOUT">
         <div class="about" style="display:  grid; grid-template-columns: 1fr 2fr ; gap: 40px;">
 
                 <div class="about-left">
@@ -75,7 +81,7 @@
 
 
 
-    <section class="services">
+    <section class="services" id="SERVICE">
         <div class="services" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
 
             <div class="service_1">
@@ -131,7 +137,7 @@
 
 
 
-    <section class="menu">
+    <section class="menu" id="MENU">
         <h1>Most Popular Dishes</h1>
 
 
@@ -177,7 +183,7 @@
     </section>
 
 
-    <section class="testimonials">
+    <section class="testimonials" id="TESTIMONIAL">
         <div class="testimonials">
 
         </div>
