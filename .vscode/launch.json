@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson12_Arsya_Math",
+      "request": "launch",
+      "mainClass": "Lesson12_Arsya_Math",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "Lesson15_SortingMethods",
       "request": "launch",
       "mainClass": "Lesson15_SortingMethods",
