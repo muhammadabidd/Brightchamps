@@ -7,8 +7,8 @@ public class Lesson18_Student_score {
     int m1;
     int m2;
     int m3;
-    int maximum;
-    double average;
+    // int maximum;
+    // double average;
 
     public Lesson18_Student_score(String n, int a, int x, int y, int z){
         name = n;
