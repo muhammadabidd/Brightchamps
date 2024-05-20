@@ -4,10 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        h1{
+            color: blue;
+        }
+
+        p{
+            font-size: 20px;
+        }
+        
+        label{
+            font-size: 20px;
+        }
+
+
+
+
+        /* selecting TAG <h1>  <p>  <textarea> <label> <ul> <li> */
+        textarea{
+            width: 500px; 
+            height: 100px;
+        }
+
+
+        /* to select the class, begin with dot(.) */
+        .container{
+            background-color: beige;
+            border-radius: 10px;
+            text-align:  center;
+
+        }
+
+
+        /* SLECTING ID using # */
+        #survey_form{
+            background-color: rgb(245, 247, 242);
+            border-radius: 10px;
+                }
+                
+        .main_container{
+                    
+            padding: 30px 30px;
+            width: 700px;
+
+            align-items: center;
+            margin: 30px auto;
+
+        }
+
+        .form-group{
+            margin: 20px 0;
+        }
+
+        button{
+            padding : 7px;
+            font-size: 15px;
+            border-width: 0px;
+            background-color: aquamarine;
+            border-radius: 5px;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover{
+            background-color: aqua;
+            padding: 10px;
+        }
+
+
+    </style>
+
+
 </head>
 <body>
 
-    <div class="container">
+    <div class="container main_container">
         <header class="header">
           <h1 id="title" class="text-center">Restaurant Feedback Form</h1>
           <p id="description" class="description text-center">
@@ -18,7 +106,7 @@
     
 
 
-    <form action="" id="survey_form">
+    <form action="" id="survey_form" class="main_container">
         <div class="form-group">
             <label for="">Name</label>
             <input type="text" name="" id="" placeholder="Insert Your name Here" required>
@@ -53,14 +141,47 @@
 
         <div class="form-group">
             <p>would you recommend this to a friend?</p>
-            
-            <label for="">  <input type="radio" name="" id=""> Definitely</label>
-            <label for="">  <input type="radio" name="" id=""> Not SUre</label>
-            <label for="">  <input type="radio" name="" id=""> No thanks</label>
+            <label for="">  <input type="radio" name="recommendation" id=""> Definitely</label>
+            <label for="">  <input type="radio" name="recommendation" id=""> Not SUre</label>
+            <label for="">  <input type="radio" name="recommendation" id=""> No thanks</label>
 
 
 
         </div>
+
+
+        <div class="form-group">
+            <p>What music Genre do you like?</p>
+            <label for="">  <input type="radio" name="genre" id=""> Rock</label>
+            <label for="">  <input type="radio" name="genre" id=""> Pop</label>
+            <label for="">  <input type="radio" name="genre" id=""> Dangdut</label>
+
+
+
+        </div>
+
+        <div class="form-group">
+            <p>What would you like to see improved?</p>
+
+
+            <label for="">  <input type="checkbox" name="genre" id=""> Food </label>
+            <label for="">  <input type="checkbox" name="genre" id=""> Taste </label>
+            <label for="">  <input type="checkbox" name="genre" id=""> Service Time</label>
+            <label for="">  <input type="checkbox" name="genre" id=""> Cleanes</label>
+
+
+
+        </div>
+
+
+
+        <div class="form-group">
+            <p>Any comments or suggestions??</p>
+
+                <textarea name="" id=""  placeholder="put your comments here" ></textarea>
+        </div>
+
+
 
 
 
