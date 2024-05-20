@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lesson18_Student_score {
+public class Lesson17_Student_score {
 
     String name;
     int age;
@@ -10,7 +10,7 @@ public class Lesson18_Student_score {
     // int maximum;
     // double average;
 
-    public Lesson18_Student_score(String n, int a, int x, int y, int z){
+    public Lesson17_Student_score(String n, int a, int x, int y, int z){
         name = n;
         age = a;
         m1 = x;
@@ -58,7 +58,7 @@ public class Lesson18_Student_score {
     
     public static void main(String[] args) {
 
-        Lesson18_Student_score student1 = new Lesson18_Student_score("", 0, 0, 0, 0);
+        Lesson17_Student_score student1 = new Lesson17_Student_score("", 0, 0, 0, 0);
 
         student1.input();
 

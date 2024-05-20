@@ -1,4 +1,4 @@
-public class Lesson19_Catch_Exeption {
+public class Lesson18_Catch_Exeption {
     public static void main(String[] args) {
 
         // FIRST LESSON

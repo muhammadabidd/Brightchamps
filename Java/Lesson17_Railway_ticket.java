@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lesson18_Railway_ticket {
+public class Lesson17_Railway_ticket {
 
     String name, coach;
     int amount;
@@ -56,7 +56,7 @@ public class Lesson18_Railway_ticket {
 
     public static void main(String[] args) {
         
-        Lesson18_Railway_ticket tiket1 = new Lesson18_Railway_ticket();
+        Lesson17_Railway_ticket tiket1 = new Lesson17_Railway_ticket();
         tiket1.Accept();
 
         tiket1.update();

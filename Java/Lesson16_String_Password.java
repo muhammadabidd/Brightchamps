@@ -1,4 +1,4 @@
-public class Lesson17_String_Password {
+public class Lesson16_String_Password {
     
 
     public static void main(String[] args) {
