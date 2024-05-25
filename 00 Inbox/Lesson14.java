@@ -1,6 +1,7 @@
 // import java.lang.reflect.Array;
 import java.util.Arrays;
 
+@SuppressWarnings("unused")
 public class Lesson14 {
 
     public static void main(String[] args) {

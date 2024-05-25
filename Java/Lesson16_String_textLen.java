@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 public class Lesson16_String_textLen {
     public static void main(String[] args) {
 
