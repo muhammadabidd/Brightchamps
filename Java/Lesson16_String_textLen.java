@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Lesson17_String_textLen {
+public class Lesson16_String_textLen {
     public static void main(String[] args) {
 
        String word ="";

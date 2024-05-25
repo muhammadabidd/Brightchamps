@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lesson16_Math_GuessNumber02 {
+public class Lesson15_Math_GuessNumber02 {
 
     public static void main(String[] args) {
         
