@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calming Website</title>
+
+
+    <style>
+        .focus{
+            /* display: inline-block; */
+            /* position: fixed; */
+            /* top : 50px ;
+            left : 50px */
+            margin: 0px auto;
+            width: 100px;
+            background-color: blueviolet;
+            height: 100px;
+            border-radius: 50%;
+            transform-origin: 50% 50%;
+            animation: breath 2s ease infinite none running;
+            /* animation : [name] [duration] [animation-type] [repetition] [delay] [pause] */
+
+        }
+
+
+
+        @keyframes breath {
+
+                /* 25%,
+                50% {
+                background-color: #54e316;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                } */
+
+
+                0% {
+                    width: 0px;
+                    height: 0px;
+                }
+
+                100%{
+                    width: 100px;
+                    height: 100px;
+                }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Focus Breathing</h1>
+
+    <div class="focus">
+        <div>
+
+        </div>
+    </div>
+
+    <p>Inhale through your nose as the circle expands,
+        hold your breath,
+        and then exhale through your mouth as it contracts.
+        Repeat this as needed.</p>
+
+
+    <div class="audio">
+        <audio src="audio/rain.mp3"  loop></audio>
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
