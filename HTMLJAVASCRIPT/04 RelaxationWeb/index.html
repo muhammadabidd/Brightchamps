@@ -23,6 +23,11 @@
 
         }
 
+        .audio img{
+            width: 20px;
+            height: 20px;
+        }
+
 
 
         @keyframes breath {
@@ -66,9 +71,48 @@
 
 
     <div class="audio">
-        <audio src="audio/rain.mp3"  loop></audio>
+        <audio  src="audio/rain.mp3" id="player" autoplay loop></audio>
+
+
+        <img src="img/pause.png" alt="" onclick="stoppppp()">
+        <img src="img/volumedown.png" alt="" onclick="downnn()">
+
+        <input type="range">
+
+        <img src="img/volume-up.png" alt="" onclick="uppp()">
+        <img src="img/play-button.png" alt="" onclick="mulaiiiiiii()">
+
 
     </div>
+
+
+    <script>
+
+        // we use javascript
+
+
+        // def pause(param1, param2):
+        //     #this is the code when the fucntion run
+
+        function stoppppp(){
+            document.getElementById("player").pause();
+
+        }
+
+        function mulaiiiiiii(){
+            document.getElementById('player').play();
+        }
+
+        function uppp(){
+            document.getElementById('player').volume += 0.1;
+        }
+
+        function downnn(){
+            document.getElementById('player').volume -= 0.1;
+        }
+
+
+    </script>
 
 
 
