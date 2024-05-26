@@ -49,6 +49,7 @@ body {
             padding: 5px;
             /* radius of the element's corners*/
             border-radius: 5px;
+         
         }
 
         .form-group {
@@ -62,6 +63,7 @@ label {
   align-items: center;
   font-size: 18px;
   margin-bottom: 5px;
+  gap :10px
 }
 
 input,
@@ -76,9 +78,64 @@ textarea {
 
 
 
-input {
+.form-control{
+    /* display: block; */
+    width: 100%;
+    height: 40px;
+    padding: 8px 8px;
+    color: #495057;
+    background-color: #fff;
+    /*how far a background image extends */
+    background-clip: padding-box;
+    /*sets an element's border*/
+    border: 1px solid #ced4da;
+    /*defines the radius of the element's corners.*/
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
 
 
+
+
+
+
+
+
+
+
+button {
+  /*create a no border*/
+  border: none;
+}
+
+.submit-button {
+  /*starts on a new line */
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #37af65;
+  /*text color same as parents */
+  color: inherit;
+  /*make the corner rounded */
+  border-radius: 2px;
+  /*The cursor is a pointer and indicates a link*/
+  cursor: pointer;
+  /*wait for a tenth of a second*/
+  transition: 1s;
+}
+
+.submit-button:hover {
+  background: rgba(173, 255, 47, 0.7);
+}
+
+
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
 }
     </style>
 </head>
@@ -114,7 +171,7 @@ input {
 
         <div class="form-group">
             <label for="">How many are dining</label>
-            <select name="" id="" class="form-control" style="display: block; width: 100%;">
+            <select name="" id="" class="form-control" >
                 <option disabled selected value=""> SELECT THE ITEM BELOw</option>
 
                 <option value="">Individual</option>
@@ -171,8 +228,13 @@ input {
 
         <div class="form-group">
             <p>Any comments or suggestions?</p>
+<<<<<<< HEAD
+            <textarea id="comments" class="input-textarea" name="comment" class="input-textarea"
+                placeholder="Enter your comment here..."></textarea>
+=======
             <textarea id="comments" class="input-textarea" name="comment"
                 placeholder="Enter your comment asd..."></textarea>
+>>>>>>> 5ec2998261e67b9574b34cc60fc65af0817b85a4
         </div>
 
 
@@ -182,7 +244,7 @@ input {
 
 
         <div class="form-group">
-            <button type="submit">Submit The Form</button>
+            <button type="submit" class="submit-button">Submit The Form</button>
         </div>
 
 
