@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+
+
+
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap');
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .showcase{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            
+    
+        }
+
+
+
+        /* HEADER ############################################################## */
+        header{
+            padding: 40px 100px;
+
+        }
+
+
+        nav{
+            font-size: 38px;
+            font-weight: 800;
+            text-transform: uppercase;
+            
+            
+            
+        }
+        
+        nav ul {
+            
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+            padding: 10px 20px;
+            
+        }
+
+        nav ul li a:hover{
+            background-color: rgba(61, 61, 59, 0.459);
+         
+            
+        }
+
+
+
+
+        /* VIDEO ############################################ */
+        video{
+            position: absolute;
+            object-fit: cover;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+
+
+            width: 100%;
+            height: 100vh;
+            opacity: 0.8;
+            z-index: -2;
+        }
+
+
+        .overlay{
+
+            position: absolute;
+            object-fit: cover;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+
+
+            width: 100%;
+            height: 100vh;
+            opacity: 0.2;
+            background-color: black;
+            z-index:    -1;
+
+        }
+
+
+
+
+
+        /* TEXT  ###########################*/
+
+        .text{
+            margin-top: 20vh;
+            color: white;
+            padding: 0px 100px;
+            max-width: 850px;
+        }
+
+        .text h2{
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 35px;
+        }
+
+        .text h3{
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 75px;
+        }
+
+        .text p{
+            line-height: 18px;
+            margin-bottom: 20px;
+        }
+
+        .text a{
+            display: inline-block;
+            font-size: 16px;
+            background: white;
+            text-decoration:  none;
+            color: black;
+            padding: 10px 15px;
+            margin: 0px 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            transition: 0.2s;
+        }
+
+        .text a:hover{
+                letter-spacing: 6px;
+        }
+
+
+
+
+        /* footer ########################## */
+
+        footer {
+            position: fixed;
+            padding: 0px 100px 50px 100px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        footer img{
+            width: 40px;
+       
+        }
+
+        footer a{
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="showcase">
+
+
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id="TRAVEL" onclick="travel()">Travel</a>
+                    </li>
+                    <li>
+                        <a href="#" id="ANIME" onclick="anime()">Anime</a>
+                    </li>
+                    <li>
+                        <a href="#" id="WARIOR" onclick="warior()">Warrior</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+    
+        <main>
+            <!-- to control : control -->
+            <video src="vid/travel.mp4" id="VIDEO" autoplay loop muted ></video>
+    
+            <div class="overlay"></div>
+    
+            <div class="text">
+                <h2>Never Stop To </h2>
+                <h3>Exploring The World</h3>
+                <p>"Traveling is a profound journey that awakens the soul to the vastness of our world. As we set foot in new
+                  landscapes, we are reminded that life's true beauty lies beyond our comfort zones. It's a dance with the
+                  unfamiliar, a symphony of cultures and experiences that color the pages of our memories. Each destination
+                  holds a story, and each encounter adds a brushstroke to the canvas of our understanding. Through travel, we
+                  find ourselves humbled by nature's wonders and enriched by the diversity of humanity. It's a transformative
+                  endeavor that unveils the uncharted territories within and around us, forever echoing the sentiments of those
+                  who have journeyed before us: to travel is to truly live.</p>
+                  <a href="#" onclick="travel()">Explore Travel</a>
+                <a href="#" onclick="anime()">Explore Anime</a>
+                <a href="#" onclick="warior()">Explore Warrior</a>
+              </div>
+        </main>
+    
+        <footer>
+            <ul>
+                <li>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt=""></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+    <script>
+        function warior() {
+            document.getElementById("VIDEO").src = "vid/Warrior.mp4";
+   
+        }
+
+        function anime() {
+            document.getElementById("VIDEO").src = "vid/anime.mp4";
+
+        }
+
+        function travel() {
+            document.getElementById("VIDEO").src = "vid/travel.mp4";
+
+        }
+
+
+    </script>
+</body>
+</html>
