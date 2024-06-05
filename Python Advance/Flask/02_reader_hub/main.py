@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
@@ -32,8 +32,21 @@ books = [
 
 @app.route('/')
 def book_list():
+    print("this is inside main route")
+    print(request.method)
     return render_template('book_list.html', title = title, books = books)
 
+
+
+@app.route('/book/<int:book_id>')
+def book_detail(book_id):
+    print("This is inside book detail")
+    print(request.method)
+    book = next((book for book in books if book['id'] == book_id), None)
+    if book :
+        return render_template('book_detail.html', book = book)
+    else:
+        return "Book not found", 404
 
 
 if __name__ == '__main__':
