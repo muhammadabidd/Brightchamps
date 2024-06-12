@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Lesson24_Insertion",
+      "request": "launch",
+      "mainClass": "Lesson24_Insertion",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
+      "name": "readfile",
+      "request": "launch",
+      "mainClass": "Lesson29_Readfile.readfile",
+      "projectName": "Brightchamps_24cf312a"
+    },
+    {
+      "type": "java",
       "name": "main",
       "request": "launch",
       "mainClass": "main",
