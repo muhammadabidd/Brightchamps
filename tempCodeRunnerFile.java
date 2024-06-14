@@ -1,3 +1,2 @@
-    // for (int i = 0; i < rightarr.length; i++) {
-        
-    // }
+
+            System.out.println(Arrays.toString(arr[i]));         
