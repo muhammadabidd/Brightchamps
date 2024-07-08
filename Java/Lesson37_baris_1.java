@@ -1,3 +1,12 @@
+// 1/1 + 1/2 + 1/3 + ....
+
+//angka = 10
+// 1/1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + 1/8 + 1/9 + 1/10
+
+
+//angka = 7
+
+
 import java.util.Scanner;
 
 public class Lesson37_baris_1 {

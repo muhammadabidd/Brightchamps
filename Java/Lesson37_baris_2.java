@@ -1,6 +1,14 @@
 //Find sum of factorials till N factorial (1! + 2! + 3! + … + N!)
 // Make sure to to input big number, because it will be to big to handle by java.
 
+//dibaca factorial
+// 5! = 5 * 4 * 3 * 2 * 1
+// 7! = 7 * 6 * 5 * 4 * 3 * 2 * 1
+
+//angka = 4
+// 1! + 2! + 3! + 4!
+
+
 import java.util.Scanner;
 
 public class Lesson37_baris_2 {
