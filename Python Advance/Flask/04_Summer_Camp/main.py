@@ -65,7 +65,9 @@ def add_students():
 
 @app.route('/show_details')
 def show_details():
-    return render_template('show_details.html')
+    Students = students.query.all()
+
+    return render_template('show_details.html', students = Students)
 
 
 
