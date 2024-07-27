@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+
+    <style>
+
+
+        select{
+            background-color: rgb(229, 219, 238);
+            display: inline-block;
+            align-items: center;
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border:  none;
+            margin-bottom: 50px;
+        }
+
+
+        h1{
+            text-align: center;
+            margin-bottom: 250px;
+            font-size: 75px;
+        }
+        span, .time{
+            font-size: 50px;
+        }
+
+        .option, .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .format{
+            margin-left: 20px;
+            font-size: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <h1>Digital Clock</h1>
+
+
+    <div class="option">
+        <select name="" id="">
+            <option value=""> 12 Hour Format</option>
+            <option value=""> 24 Hour Format</option>
+        </select>
+
+    </div>
+
+
+    <div class="time">
+
+        <span>Hour</span> :
+        <span>Minute</span> :
+        <span>Second</span>
+
+        <span class="format">AM</span>
+    </div>
+
+
+
+
+    <script>
+        var minutes = 0;
+        var seconds = 0;
+        var hours = 0;
+
+
+        var presentTime=new Date();
+        var minutes=String(presentTime.getMinutes()).padStart(2,'0');
+
+        console.log(presentTime.getMinutes())
+
+    </script>
+    
+</body>
+</html>
