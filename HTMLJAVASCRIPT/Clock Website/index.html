@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+
+    <style>
+
+
+        select{
+            background-color: rgb(229, 219, 238);
+            display: inline-block;
+            align-items: center;
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border:  none;
+            margin-bottom: 50px;
+        }
+
+
+        h1{
+            text-align: center;
+            margin-bottom: 250px;
+            font-size: 75px;
+        }
+        span, .time{
+            font-size: 50px;
+        }
+
+        .option, .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .format{
+            margin-left: 20px;
+            font-size: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <h1>Digital Clock</h1>
+
+
+    <div class="option">
+        <select name="" id="pilihan">
+            <option value="24Hour"> 24 Hour Format</option>
+            <option value="12Hour"> 12 Hour Format</option>
+        </select>
+
+    </div>
+
+
+    <div class="time">
+
+        <span id="jam">Hour</span> :
+        <span id="menit">Minute</span> :
+        <span id="detik">Second</span>
+
+        <span class="format" id="format">AM</span>
+    </div>
+
+
+
+
+    <script>
+        var minutes = 0;
+        var seconds = 0;
+        var hours = 0;
+        var ampm = '24Hour';
+
+        
+        
+        function TheClock(){
+            var presentTime=new Date();
+            var minutes = presentTime.getMinutes();
+            var seconds = presentTime.getSeconds();
+            var hours = presentTime.getHours();
+            var format = document.getElementById("format");
+            console.log(minutes)
+            console.log(seconds)
+            console.log(hours)
+
+
+            var jam = document.getElementById("jam");
+            var menit = document.getElementById("menit");
+            var detik = document.getElementById("detik");
+
+            jam.innerHTML = String(hours).padStart(2, '0') ;
+            menit.innerHTML = String(minutes).padStart(2, '0');
+            detik.innerHTML = String(seconds).padStart(2, '0');
+
+            if (ampm == '24Hour') {
+                format.innerHTML = '';
+                
+            }
+
+
+        }
+
+        setInterval(TheClock, 1000);
+
+
+        pilihan = document.getElementById("pilihan");
+        pilihan.addEventListener('change', (event) => {
+                console.log("it changed")
+
+        })
+
+        
+    </script>
+    
+</body>
+</html>
