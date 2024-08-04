@@ -8,8 +8,21 @@
 
     <style>
 
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+        :root{
+            --main : #122f8f;
+            --shadow-dark : #202e5ecc;
+            --shadow-light : #2c459673;
+        }
+
 
         * {
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-style: normal;
+
+            font-size: 18px;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -31,16 +44,21 @@
 
 
         tr th{
-            background-color: #EFEFEF;
+            background-color: var(--main);
             width: 60px;
             height: 60px;
             border-radius: 30px;
-            box-shadow: 5px 5px 9px #D4D4D4, -5px -5px 5.3px #FDFDFD;
+            box-shadow: 5px 5px 9px var(--shadow-dark), -5px -5px 5.3px var(--shadow-light);
+            cursor: pointer;
+        }
 
+        tr th:active{
+            box-shadow: inset 5px 5px 9px var(--shadow-dark), inset -5px -5px 5.3px var(--shadow-light);
         }
 
         table{
-            background-color: #EFEFEF;
+            color: rgb(215, 218, 223);
+            background-color: var(--main);
             padding: 25px;
             border-radius: 30px;
             border-collapse: separate;
@@ -50,6 +68,25 @@
         h2{
             text-align: center;
             margin-bottom: 40px;
+        }
+
+        .result{
+            font-size: 20px;
+            font-style: italic;
+            cursor:crosshair;
+            height: 100px;
+        }
+        .result:active{
+            box-shadow:  5px 5px 9px var(--shadow-dark),  -5px -5px 5.3px var(--shadow-light);
+        }
+        
+
+        .equal {
+            background-color: #16F4D0;
+            color: black;
+            font-size: 35px;
+            text-align: center;
+
         }
    
 
@@ -67,7 +104,7 @@
         <table>
             <tbody>
                 <tr>
-                    <th colspan="4"> 999999</th>
+                    <th colspan="4" class="result"> 999999</th>
                 </tr>
 
 
@@ -98,7 +135,7 @@
                 <tr>
                     <th>.</th>
                     <th>0</th>
-                    <th colspan="2">=</th>
+                    <th colspan="2" class="equal">=</th>
                     
                 </tr>
 
