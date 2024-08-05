@@ -20,20 +20,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        body{
+            background-color: rgba(0, 0, 0, 0.616);
+        }
+
+        .row{
+           display: flex;
+           justify-content: space-between;
+        }
+
+        #Navigation-Area img{
+            width: 160px;
+            height: 44px;
+
+        }
+
+        nav ul li{
+            display: inline-block;
+        }
+
+        /* nav{
+            
+        } */
+
+
+        .container {
+            margin: 20px 30px;
+        }
+
+
+        .green-font{
+            color: #4baf47;
+        }
+
+
+        .regular-font{
+            color: white;
+        }
+
+        #Hero-Area{
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+
+
+    </style>
 </head>
 <body>
     
 
     <div id="Navigation-Area">
+
+   
         <div class="container">
-            <nav>
-                <ul>Home</ul>
-                <ul>About</ul>
-                <ul>Service</ul>
-                <ul>Page</ul>
-                <ul>Blog</ul>
-                <ul>Contact</ul>
-            </nav>
+
+
+            <div class="row">
+
+                <img src="https://html.ditsolution.net/echofy/assets/images/home1/logo.png" alt="">
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+
+
+                    </ul>
+
+                </nav>
+
+            </div>
 
         </div>
     </div>
@@ -41,6 +110,23 @@
 
     <div id="Hero-Area">
         <div class="container">
+            <div class="hero">
+                <p class="green-font">Natural Environment</p>
+
+
+                <h1>Be Safe Control Environment</h1>
+
+                <p class="regular-font">Professionally Optimize interdependent connect best practice. Blablabla fabrically done</p>
+
+
+                <div>
+                    <a href="#">Lets Talk</a>
+                    <a href="#">Read More</a>
+
+                </div>
+
+
+            </div>
 
         </div>
     </div>
@@ -48,7 +134,7 @@
 
     <div id="About-Area">
         <div class="container">
-
+           
         </div>
     </div>
 
