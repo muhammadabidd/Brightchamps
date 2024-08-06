@@ -75,6 +75,53 @@
         }
 
 
+        #Hero-Area a{
+            display: inline-block;
+            width: 90px;
+            background-color: aliceblue;
+            height: 25px;
+            border-radius: 5px;
+            padding: 14px 40px;
+            box-sizing: content-box;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            line-height: 150%;
+            margin: 0 20px 20px 0;
+            /* margin : top-bottom left-right; */
+
+            transition: 0.2s;
+            position: relative;
+        }
+
+        #Hero-Area a:first-of-type{
+            background-color: #49AF45;
+        }
+
+        /* #Hero-Area a:first-of-type:hover{
+            background-color: white;
+            color: #49AF45;
+        } */
+
+        #Hero-Area a:first-of-type:before{
+            background-color: red;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 0px;
+            border-radius: 5px;
+            
+        }
+
+
+        #Hero-Area a:nth-child(2){
+            background-color: transparent;
+        }
+
 
     </style>
 </head>
@@ -119,7 +166,7 @@
                 <p class="regular-font">Professionally Optimize interdependent connect best practice. Blablabla fabrically done</p>
 
 
-                <div>
+                <div >
                     <a href="#">Lets Talk</a>
                     <a href="#">Read More</a>
 
