@@ -70,13 +70,13 @@
             margin-bottom: 40px;
         }
 
-        .result{
+        #result{
             font-size: 20px;
             font-style: italic;
-            cursor:crosshair;
+            cursor:default;
             height: 100px;
         }
-        .result:active{
+        #result:active{
             box-shadow:  5px 5px 9px var(--shadow-dark),  -5px -5px 5.3px var(--shadow-light);
         }
         
@@ -104,7 +104,7 @@
         <table>
             <tbody>
                 <tr>
-                    <th colspan="4" class="result"> 999999</th>
+                    <th colspan="4" id="result"> 999999</th>
                 </tr>
 
 
@@ -112,36 +112,68 @@
                     <th>C</th>
                     <th>del</th>
                     <th>%</th>
-                    <th>/</th>
+                    <th onclick="something('/')">/</th>
                 </tr>
                 <tr>
-                    <th>7</th>
-                    <th>8</th>
-                    <th>9</th>
-                    <th>*</th>
+                    <th onclick="something('7')">7</th>
+                    <th onclick="something('8')">8</th>
+                    <th onclick="something('9')">9</th>
+                    <th onclick="something('*')">*</th>
                 </tr>
                 <tr>
-                    <th>4</th>
-                    <th>5</th>
-                    <th>6</th>
-                    <th>-</th>
+                    <th onclick="something('4')">4</th>
+                    <th onclick="something('5')">5</th>
+                    <th onclick="something('6')">6</th>
+                    <th onclick="something('-')">-</th>
                 </tr>
                 <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>+</th>
+                    <th onclick="something('1')">1</th>
+                    <th onclick="something('2')">2</th>
+                    <th onclick="something('3')">3</th>
+                    <th onclick="something('+')">+</th>
                 </tr>
                 <tr>
-                    <th>.</th>
-                    <th>0</th>
-                    <th colspan="2" class="equal">=</th>
+                    <th onclick="something('.')">.</th>
+                    <th onclick="something('0')">0</th>
+                    <th colspan="2" class="equal" onclick="hitung()">=</th>
                     
                 </tr>
 
             </tbody>
         </table>
     </div>
+
+
+
+    <script>
+        console.log("abid");
+
+        var value = "";
+
+        result = document.getElementById("result");
+        result.innerHTML = "";
+
+        function something(variabelinside) {
+            value = value + variabelinside
+
+
+            result.innerHTML = value;
+            // console.log(variabelinside)
+        }
+
+        function hitung(){
+            value = eval(value)
+            result.innerHTML = value;
+        }
+
+
+
+        
+
+
+
+
+    </script>
     
 
 
