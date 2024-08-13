@@ -1,0 +1,278 @@
+<!-- 
+ 
+
+# The whole page main screen
+# Button animation
+# slide nav bar / Burger
+# change Font 
+# draw a leaf
+# font awesome
+# picture 2 layer
+# profile card
+# background color
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+
+        body{
+            background-color: rgba(0, 0, 0, 0.815);
+        }
+
+        .row{
+           display: flex;
+           justify-content: space-between;
+        }
+
+        #Navigation-Area img{
+            width: 160px;
+            height: 44px;
+
+        }
+
+        #Navigation-Area{
+            background-color: blue;
+            position:fixed;
+            z-index: 99;
+        }
+
+
+        nav ul li{
+            display: inline-block;
+        }
+
+        /* nav{
+            
+        } */
+
+
+        .container {
+            margin: 20px 30px;
+        }
+
+
+        .green-font{
+            color: #4baf47;
+        }
+
+
+        .regular-font{
+            color: white;
+        }
+
+        #Hero-Area{
+            padding-top: 20px;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-image: url(../images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; 
+            /* background-color: red; */
+            /* background-blend-mode: multiply; */
+
+
+            color: white;
+            & h1{
+               font-family:  "Albert Sans", sans-serif;
+            }
+            
+
+        }
+
+
+
+
+        #Hero-Area a{
+            display: inline-block;
+            width: 90px;
+            background-color: aliceblue;
+            height: 25px;
+            border-radius: 5px;
+            padding: 14px 40px;
+            box-sizing: content-box;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            line-height: 150%;
+            margin: 0 20px 20px 0;
+            /* margin : top-bottom left-right; */
+
+            transition: 0.2s;
+            position: relative;
+            border: 1.5px #49AF45 solid;
+        }
+
+        #Hero-Area a:first-of-type{
+            background-color: #49AF45;
+            z-index: 1;
+        }
+
+        #Hero-Area a:first-of-type:hover{
+            
+            color: #49AF45;
+        }
+
+        #Hero-Area a:first-of-type::before{
+            background-color: white;
+            width: 0;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            display: inline-block;
+            content: "";
+            position: absolute;
+            border-radius: 5px;
+            transition: 0.2s;
+            z-index: -1;
+        
+        }
+
+        #Hero-Area a:first-of-type:hover::before {
+                left: 0;
+                width: 100%;
+                color: black;
+             
+        }
+
+
+        #Hero-Area a:nth-child(2){
+            background-color: transparent;
+        }
+
+        #Hero-Area svg{
+            width: 15px;
+            margin-left: 5px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="Navigation-Area">
+        
+
+   
+        <div class="container">
+
+
+            <div class="row">
+
+                <img src="https://html.ditsolution.net/echofy/assets/images/home1/logo.png" alt="">
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="Hero-Area">
+        <div class="container">
+            <div class="hero">
+                <p class="green-font">Natural Environment</p>
+
+
+                <h1>Be Safe Control Environment</h1>
+
+                <p class="regular-font">Professionally Optimize interdependent connect best practice. Blablabla fabrically done</p>
+
+
+                <div >
+                    <a href="#">Lets Talk<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg></a>
+                    <a href="#">Read More</a>
+
+                </div>
+
+               
+
+                </button>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="Hero-Area">
+        <div class="container">
+            <div class="hero">
+                <p class="green-font">Natural Environment</p>
+
+
+                <h1>Be Safe Control Environment</h1>
+
+                <p class="regular-font">Professionally Optimize interdependent connect best practice. Blablabla fabrically done</p>
+
+
+                <div >
+                    <a href="#">Lets Talk<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></svg></a>
+                    <a href="#">Read More</a>
+
+                </div>
+
+               
+
+                </button>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="About-Area">
+        <div class="container">
+           
+        </div>
+    </div>
+
+
+    <div id="Service-Area">
+        <div class="container">
+
+        </div>
+    </div>
+
+
+    
+    
+
+
+
+    
+</body>
+</html>

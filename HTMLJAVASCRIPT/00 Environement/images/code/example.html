@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Exercise</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .main div{
+            
+            width: 100px;
+            height: 100px;
+            
+            padding: 0px;
+            
+        }
+
+
+        .main div:first-child{
+            background-color: blueviolet;
+            position: relative;
+        }
+        
+        .main div:nth-child(2){
+            background-color: blue;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            width: 10px;
+        }
+
+        .main div:nth-child(3){
+            background-color: green;
+            
+        }
+
+        .main{
+            background-color:antiquewhite;     
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+
+        /* #abolute
+        #sticky
+        #fixed
+        #relative */
+
+
+
+
+
+   
+    </style>
+
+</head>
+<body>
+    <div class="main">
+
+        <div class="static-div"></div>
+        <div class="relative-div"></div>
+        <div class="absolute-div"></div>
+    </div>
+   
+</body>
+</html>
