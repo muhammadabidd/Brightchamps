@@ -1,0 +1,235 @@
+{
+    "users": [
+      {
+        "UserID": "u001",
+        "Username": "AliceW",
+        "Email": "alice@example.com",
+        "ProfilePictureLink": "link_to_profile_pic_001",
+        "CreatedChallenges": ["c001"],
+        "CreatedQuestionnaires": ["q001"],
+        "PlayedGames": ["g001", "g003"],
+        "PlayedChallenges": ["c002"],
+        "PlayedQuestionnaires": ["q002"]
+      },
+      {
+        "UserID": "u002",
+        "Username": "BobX",
+        "Email": "bob@example.com",
+        "ProfilePictureLink": "link_to_profile_pic_002",
+        "CreatedChallenges": ["c002"],
+        "CreatedQuestionnaires": ["q002"],
+        "PlayedGames": ["g002", "g004"],
+        "PlayedChallenges": ["c001"],
+        "PlayedQuestionnaires": ["q001", "q003"]
+      },
+      {
+        "UserID": "u003",
+        "Username": "CharlieY",
+        "Email": "charlie@example.com",
+        "ProfilePictureLink": "link_to_profile_pic_003",
+        "CreatedChallenges": ["c003"],
+        "CreatedQuestionnaires": ["q003"],
+        "PlayedGames": ["g001", "g005"],
+        "PlayedChallenges": ["c001", "c002"],
+        "PlayedQuestionnaires": ["q001", "q002"]
+      },
+      {
+        "UserID": "u004",
+        "Username": "DaisyZ",
+        "Email": "daisy@example.com",
+        "ProfilePictureLink": "link_to_profile_pic_004",
+        "CreatedChallenges": ["c004"],
+        "CreatedQuestionnaires": ["q004"],
+        "PlayedGames": ["g003", "g004"],
+        "PlayedChallenges": ["c003"],
+        "PlayedQuestionnaires": ["q002", "q003"]
+      },
+      {
+        "UserID": "u005",
+        "Username": "EveV",
+        "Email": "eve@example.com",
+        "ProfilePictureLink": "link_to_profile_pic_005",
+        "CreatedChallenges": ["c005"],
+        "CreatedQuestionnaires": ["q005"],
+        "PlayedGames": ["g001", "g002"],
+        "PlayedChallenges": ["c004", "c005"],
+        "PlayedQuestionnaires": ["q001", "q004"]
+      }
+    ],
+    "challenges": [
+      {
+        "ChallengeID": "c001",
+        "ChallengeText": "Complete 10 push-ups daily",
+        "CreatedBy": "u001",
+        "PlayedBy": ["u002", "u003"]
+      },
+      {
+        "ChallengeID": "c002",
+        "ChallengeText": "Drink 2 liters of water",
+        "CreatedBy": "u002",
+        "PlayedBy": ["u001", "u003"]
+      },
+      {
+        "ChallengeID": "c003",
+        "ChallengeText": "Read 20 pages of a book",
+        "CreatedBy": "u003",
+        "PlayedBy": ["u004"]
+      },
+      {
+        "ChallengeID": "c004",
+        "ChallengeText": "Meditate for 15 minutes",
+        "CreatedBy": "u004",
+        "PlayedBy": ["u005"]
+      },
+      {
+        "ChallengeID": "c005",
+        "ChallengeText": "Write a journal entry",
+        "CreatedBy": "u005",
+        "PlayedBy": ["u004"]
+      }
+    ],
+    "games": [
+      {
+        "GameID": "g001",
+        "GameQuestion": "What is the capital of France?",
+        "AgeCategory": "12+",
+        "PlayedBy": ["u001", "u003", "u005"]
+      },
+      {
+        "GameID": "g002",
+        "GameQuestion": "Name the largest planet",
+        "AgeCategory": "10+",
+        "PlayedBy": ["u002", "u005"]
+      },
+      {
+        "GameID": "g003",
+        "GameQuestion": "Solve the math puzzle",
+        "AgeCategory": "14+",
+        "PlayedBy": ["u001", "u004"]
+      },
+      {
+        "GameID": "g004",
+        "GameQuestion": "Identify this historical figure",
+        "AgeCategory": "16+",
+        "PlayedBy": ["u002", "u004"]
+      },
+      {
+        "GameID": "g005",
+        "GameQuestion": "Spell the word correctly",
+        "AgeCategory": "8+",
+        "PlayedBy": ["u003"]
+      }
+    ],
+    "comments": [
+      {
+        "CommentID": "cm001",
+        "UserID": "u001",
+        "Comment": "Loved the push-up challenge!"
+      },
+      {
+        "CommentID": "cm002",
+        "UserID": "u002",
+        "Comment": "Drinking water has never been easier."
+      },
+      {
+        "CommentID": "cm003",
+        "UserID": "u003",
+        "Comment": "Reading every day is so calming."
+      },
+      {
+        "CommentID": "cm004",
+        "UserID": "u004",
+        "Comment": "Meditation really helps with focus."
+      },
+      {
+        "CommentID": "cm005",
+        "UserID": "u005",
+        "Comment": "Journaling is such a good habit."
+      }
+    ],
+    "questionnaires": [
+      {
+        "QuestionnaireID": "q001",
+        "Title": "Daily Habits",
+        "Note": "Track your daily habits",
+        "CreatedBy": "u001",
+        "Questions": ["q001_001", "q001_002"],
+        "PlayedBy": ["u002", "u003", "u005"]
+      },
+      {
+        "QuestionnaireID": "q002",
+        "Title": "Health Survey",
+        "Note": "Wellness check",
+        "CreatedBy": "u002",
+        "Questions": ["q002_001", "q002_002"],
+        "PlayedBy": ["u001", "u003", "u004"]
+      },
+      {
+        "QuestionnaireID": "q003",
+        "Title": "Reading Survey",
+        "Note": "Reading preferences",
+        "CreatedBy": "u003",
+        "Questions": ["q003_001", "q003_002"],
+        "PlayedBy": ["u002", "u004"]
+      },
+      {
+        "QuestionnaireID": "q004",
+        "Title": "Mindfulness Survey",
+        "Note": "Mindfulness practices",
+        "CreatedBy": "u004",
+        "Questions": ["q004_001", "q004_002"],
+        "PlayedBy": ["u005"]
+      },
+      {
+        "QuestionnaireID": "q005",
+        "Title": "Writing Survey",
+        "Note": "Writing habits",
+        "CreatedBy": "u005",
+        "Questions": ["q005_001", "q005_002"],
+        "PlayedBy": ["u004"]
+      }
+    ],
+    "questions": [
+      {
+        "QuestionID": "q001_001",
+        "QuestionText": "How many hours do you sleep on average?"
+      },
+      {
+        "QuestionID": "q001_002",
+        "QuestionText": "How often do you exercise in a week?"
+      },
+      {
+        "QuestionID": "q002_001",
+        "QuestionText": "Do you consume fruits and vegetables daily?"
+      },
+      {
+        "QuestionID": "q002_002",
+        "QuestionText": "How many glasses of water do you drink daily?"
+      },
+      {
+        "QuestionID": "q003_001",
+        "QuestionText": "What genre of books do you prefer?"
+      },
+      {
+        "QuestionID": "q003_002",
+        "QuestionText": "How many books do you read per month?"
+      },
+      {
+        "QuestionID": "q004_001",
+        "QuestionText": "How often do you meditate?"
+      },
+      {
+        "QuestionID": "q004_002",
+        "QuestionText": "Do you practice mindfulness techniques?"
+      },
+      {
+        "QuestionID": "q005_001",
+        "QuestionText": "How often do you write in your journal?"
+      },
+      {
+        "QuestionID": "q005_002",
+        "QuestionText": "What topics do you usually write about?"
+      }
+    ]
+  }
+  
