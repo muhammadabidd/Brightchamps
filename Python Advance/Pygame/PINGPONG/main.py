@@ -20,7 +20,7 @@ BLACK = (0,0,0)
 
 
 # Paddle
-paddle_width, paddle_height = 80, 10
+paddle_width, paddle_height = 80, 15
 paddle_x, paddle_y = (window_width - paddle_width) // 2, window_height - paddle_height - 10
 
 
