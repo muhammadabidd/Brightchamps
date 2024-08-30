@@ -1,2 +1,2 @@
-    ball_speed_y *= -1
-    
+
+BLACK = (0,0,0)

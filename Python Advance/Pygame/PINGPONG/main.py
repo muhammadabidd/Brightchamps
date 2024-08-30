@@ -27,7 +27,7 @@ paddle_x, paddle_y = (window_width - paddle_width) // 2, window_height - paddle_
 # Ball
 ball_radius = 5
 ball_x, ball_y = window_width // 2, window_height // 2
-ball_speed_x, ball_speed_y = 0, 3
+ball_speed_x, ball_speed_y = -3, -3 
 
 
 
@@ -46,6 +46,7 @@ while not game_over:
             sys.exit()
 
     keys = pygame.key.get_pressed()
+    # print(pygame.K_LEFT)
     if keys[pygame.K_LEFT] :
         paddle_x -= 5
     if keys[pygame.K_RIGHT] :
@@ -57,6 +58,8 @@ while not game_over:
     #Ball Control 
     ball_x += ball_speed_x
     ball_y += ball_speed_y
+
+    print(ball_speed_x)
 
 
 
