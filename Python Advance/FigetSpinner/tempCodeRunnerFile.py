@@ -1,2 +1,1 @@
-
-        if event.type == QUIT:
+spinner_images[current_spinner]
