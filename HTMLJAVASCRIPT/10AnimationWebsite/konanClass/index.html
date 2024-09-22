@@ -18,6 +18,65 @@
             position: absolute;
             height: 100vh;
         }
+
+
+        #crow{
+            position: absolute;
+            width: 100px;
+            left:-100px
+        }
+
+        .cloud{
+            width: 200px;
+            position: absolute;
+        }
+
+        #cloud1{
+            top:120px;
+            left: 25%;
+        }
+
+        #cloud2{
+            top:120px;
+            left: 75%;
+        }
+
+        #sun{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(240, 190, 25);
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px 10px rgb(240, 208, 25);
+            top: 200px;
+            position: absolute;
+            left: 0;
+            animation: MOVINGTHESUUUUN 10s infinite;
+        }
+
+
+
+        @keyframes MOVINGTHESUUUUN {
+            25%{
+                left: 25%;
+                top: 0px;
+                opacity: 100%;
+            }50%{
+                left:50%;
+                top: 0px;
+                opacity: 100%;
+            }75%{
+                left:75%;
+                top: 0px;
+                background-color: orange;
+                opacity: 100%;
+            }100%{
+                left:100%;
+                top: 200px;
+                opacity: 0;;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -34,6 +93,9 @@
 
     <img class="cloud" id="cloud1" src="cloud.png">
     <img class="cloud" id="cloud2" src="cloud.png">
+
+
+    <div id="sun"></div>
     
 </body>
 </html>
