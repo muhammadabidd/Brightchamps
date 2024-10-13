@@ -8,13 +8,86 @@
 
     <style>
         #categories{
+
+            
+
+
             #cat-fiction{
                 display: flex;
                 gap: 20px;
 
-                div img{
-                    width: 100px;
+                position: relative;
+
+                .card{
+
                 }
+                
+                
+                
+                .card:hover .card-front{
+                    transition: transform 1s;
+                    transform: rotateY(180deg);
+                    transform-style: preserve-3d;
+                    backface-visibility: hidden;
+
+                }
+
+                .card:hover .card-back{
+                    transition: transform 1s;
+                    transform: rotateY(0deg);
+                    transform-style: preserve-3d;
+                    backface-visibility: hidden;
+                }
+
+
+
+
+
+
+
+                .card-front img{
+                    width: 150px;
+                    border-radius: 10px;
+                    height: 100%;
+
+
+
+
+                }
+
+
+                .card-back{
+                    width: 150px;
+                    text-align: center;
+
+                    background-color: bisque;
+                    border-radius: 10px;
+                    padding: 10px;
+                    box-sizing:border-box;
+                    /* height: 100%; */
+
+
+                  
+
+                    p{
+                        margin: 0px;
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                    }
+
+
+
+                    position: absolute;
+                    top: 0;
+                    z-index: -99;
+                    transform: rotateY(180deg);
+
+
+                   
+                }
+
+
+          
             }
             
             
@@ -40,11 +113,76 @@
         <div id="cat-fiction">
 
             
-            <div class="item1"> <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt=""></div>
-            <div class="item2"> <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt=""></div>
-            <div class="item3"> <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt=""></div>
-            <div class="item4"> <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt=""></div>
-            <div class="item4"> <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt=""></div>
+            <div class="item1 card"> 
+                <div class="card-front">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt="">
+                </div>
+
+
+                <div class="card-back">
+                    <h4 class="back-title"> Harry Potter and the goblet of fire</h4>
+                    <p class="back-author"> JK Rowling</p>
+                    <p class="back-year"> 2000 </p>
+                    <p class="back-synopsis"> harry fight the dragon and the dragon fly, harry run away with magic broom, </p>
+                </div>
+
+            </div>
+
+            <div class="item2 card"> 
+                <div class="card-front">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt="">
+                </div>
+
+
+                <div class="card-back">
+                    <h4 class="back-title"> Harry Potter and the goblet of fire</h4>
+                    <p class="back-author"> JK Rowling</p>
+                    <p class="back-year"> 2000 </p>
+                    <p class="back-synopsis"> harry fight the dragon and the dragon fly, harry run away with magic broom, </p>
+                </div>
+            </div>
+
+            <div class="item3 card"> 
+                <div class="card-front">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt="">
+                </div>
+
+
+                <div class="card-back">
+                    <h4 class="back-title"> Harry Potter and the goblet of fire</h4>
+                    <p class="back-author"> JK Rowling</p>
+                    <p class="back-year"> 2000 </p>
+                    <p class="back-synopsis"> harry fight the dragon and the dragon fly, harry run away with magic broom, </p>
+                </div>
+            </div>
+
+            <div class="item4 card"> 
+                <div class="card-front">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt="">
+                </div>
+
+
+                <div class="card-back">
+                    <h4 class="back-title"> Harry Potter and the goblet of fire</h4>
+                    <p class="back-author"> JK Rowling</p>
+                    <p class="back-year"> 2000 </p>
+                    <p class="back-synopsis"> harry fight the dragon and the dragon fly, harry run away with magic broom, </p>
+                </div>
+            </div>
+
+            <div class="item4 card"> 
+                <div class="card-front">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-book-cover-design-template-34323b0f0734dccded21e0e3bebf004c_screen.jpg?ts=1637015198" alt="">
+                </div>
+
+
+                <div class="card-back">
+                    <h4 class="back-title"> Harry Potter and the goblet of fire</h4>
+                    <p class="back-author"> JK Rowling</p>
+                    <p class="back-year"> 2000 </p>
+                    <p class="back-synopsis"> harry fight the dragon and the dragon fly, harry run away with magic broom, </p>
+                </div>
+            </div>
         </div>
         
         
