@@ -14,25 +14,25 @@ pygame.display.set_caption('Simon Says')
 # Load images and sounds for superheroes
 SUPERHEROES = {
   1: {
-    'image': pygame.transform.scale(pygame.image.load('superman.png'),
+    'image': pygame.transform.scale(pygame.image.load('Python Advance/SimonSay/Brightchamps/superman.png'),
                                     (50, 100)),
-    'sound': pygame.mixer.Sound('superman.wav')
+    'sound': pygame.mixer.Sound('Python Advance/SimonSay/Brightchamps/superman.wav')
   },
   2: {
-    'image': pygame.transform.scale(pygame.image.load('ironman.png'),
+    'image': pygame.transform.scale(pygame.image.load('Python Advance/SimonSay/Brightchamps/ironman.png'),
                                     (50, 100)),
-    'sound': pygame.mixer.Sound('ironman.wav')
+    'sound': pygame.mixer.Sound('Python Advance/SimonSay/Brightchamps/ironman.wav')
   },
   3: {
-    'image': pygame.transform.scale(pygame.image.load('batman.png'),
+    'image': pygame.transform.scale(pygame.image.load('Python Advance/SimonSay/Brightchamps/batman.png'),
                                     (50, 100)),
-    'sound': pygame.mixer.Sound('batman.wav')
+    'sound': pygame.mixer.Sound('Python Advance/SimonSay/Brightchamps/batman.wav')
   },
   4: {
     'image':
-    pygame.transform.scale(pygame.image.load('spiderman.png'), (50, 100)),
+    pygame.transform.scale(pygame.image.load('Python Advance/SimonSay/Brightchamps/spiderman.png'), (50, 100)),
     'sound':
-    pygame.mixer.Sound('spiderman.wav')
+    pygame.mixer.Sound('Python Advance/SimonSay/Brightchamps/spiderman.wav')
   },
 }
 
