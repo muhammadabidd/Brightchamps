@@ -6,26 +6,152 @@
     <title>Document</title>
     <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+           *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           }
+
+           body{
+            display: flex;
+           }
+
+            #left{
+                background-color: dodgerblue;
+                width: 15%;
+                height: 100vh;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 25px;
+                /* position: absolute; */
+               
+
+                img{
+                    width: 75px;
+                    margin-bottom: 50px;
+                }
+
+
+                li{
+                    /* background-color: aliceblue; */
+                    margin-bottom: 20px;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 700;
+                    font-size: 20px;
+
+                }
+
+            }
+
+
+
+            #explore{
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+
+
+                .box{
+                    width: 300px;
+                    background-color: rgb(128, 236, 177);
+                    border: 2px black solid;
+                    padding: 20px;
+
+
+                    h2{
+                        padding-bottom: 10px;
+                    }
+
+                    p{
+                        padding-bottom : 15px;
+                    }
+
+
+                    a {
+                        background-color: beige;
+                        padding: 6px;
+                        border-radius: 3px;
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
+
+
+
+            .top-nav{
+                display: flex;
+                justify-content: space-between;
+                background-color: beige;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 20px ;
+                padding-right: 20px ;
+                /* position: absolute; */
+            }
+
+
+            #home{
+                height: 100vh;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+
+                .text-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    
+                    .first-text{
+                        margin-right: 20px;
+                        font-size: 36px;
+                    }
+
+                    .second-text{
+                        font-size:36px;
+                    }
+                }
+            }
+
+    </style>
 </head>
 <body>
     
 
-    <nav>
-        <div class="logo"> 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/512px-LEGO_logo.svg.png" alt="">
-        </div>
+    <nav id="left">
 
+        <div class="logo-nav">
 
-
-
-
-        <div class="nav-button">
-            <ul>
-                <li><a href="#"> <i class="fa-solid fa-house"></i> Home </a></li>
-                <li><a href="#"> Explore</a></li>
-                <li><a href="#"> Feed </a></li>
-            </ul>
-
+                <div class="logo"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/512px-LEGO_logo.svg.png" alt="">
+                </div>
+        
+        
+        
+        
+        
+                <div class="nav-button">
+                    <ul>
+                        <li><a href="#"> <i class="fa-solid fa-house"></i> Home </a></li>
+                        <li><a href="#"> Explore</a></li>
+                        <li><a href="#"> Feed </a></li>
+                    </ul>
+        
+                </div>
         </div>
 
 
@@ -36,7 +162,94 @@
 
     </nav>
 
-    <main></main>
+    <main>
+        <div class="top-nav">
+
+            <i class="fas fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search here...">
+
+            </div>
+
+        </div>
+
+
+        <section id="home">
+
+
+            <div class="text-wrapper">
+
+                <div class="first-text glitch" data-text= "WRITING"> WRITING</div> 
+                <div class="second-text"> 
+                    <span> Z </span>
+                    <span> O </span>
+                    <span> N </span>
+                    <span> E </span>
+                </div>
+            </div>
+
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci sunt cumque quas odio architecto provident vel iste neque, ut nemo! Quod, id. Eum atque reprehenderit molestias? Nemo, modi natus.</p>
+           
+
+            <a href="#">Explore</a>
+
+        </section>
+
+
+
+
+        <section id="explore">
+            <div class="box box-1">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-2">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-3">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-4">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-5">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-6">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+
+            <div class="box box-7">
+                <h2>Lorem Ipsum Dolor Sit Amet</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium id error laudantium ullam dolorem culpa magni. Odit ipsum itaque animi libero quaerat labore ipsam, dolore, consequuntur ab, delectus cupiditate in?</p>
+                <a href="#">Read</a>
+            </div>
+        </section>
+
+
+
+
+    </main>
 
 
 
