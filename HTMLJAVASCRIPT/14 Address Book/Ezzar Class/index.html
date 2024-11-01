@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
 
     <style>
+
+html,body{
+    font-family: "Sofia", sans-serif;
+    font-size:18px;
+}
+
+
         body{
             margin: 0px auto;
             max-width: 1000px;
@@ -28,6 +35,8 @@
    background-color: cadetblue;
    line-height: 20px;
 }
+
+
 
 
 div {
@@ -59,6 +68,22 @@ button:hover{
 }
 
 
+
+header{
+   background-color: cadetblue;
+   padding: 0 20px;
+   color: white;
+   line-height: 100px;
+}
+
+#new-contact, #contact-display {
+   padding: 20px;
+}
+#new-contact {
+   background: rgb(206, 239, 243);
+}
+
+
 </style>
 
 
@@ -67,18 +92,21 @@ button:hover{
 </head>
 <body>
 
-    <div>
-        <h1> Address Book</h1>
-    </div>
+    <header>
+        <div>
+            <h1> Address Book</h1>
+        </div>
+
+    </header>
 
 
     <div class="tablee">
-        <h2>Contacts</h2>
+        <h2 class="contacts">Contacts</h2>
 
 
 
         <table>
-            <tr>
+            <tr id="head">
                 <thead>
                     <th>Name</th>
                     <th>Address</th>
@@ -88,6 +116,9 @@ button:hover{
 
                 </thead>
             </tr>
+
+            <tbody id="data">  
+            </tbody>
         </table>
     </div>
 
@@ -104,23 +135,23 @@ button:hover{
             </div>
 
             <div>
-                <label for="name">Address:</label>
-                <input id="name" type="text"  maxlength="15" required>
+                <label for="add">Address:</label>
+                <input id="add" type="text"  maxlength="30" required>
             </div>
 
             <div>
-                <label for="name">Telephone:</label>
-                <input id="name" type="text"  maxlength="15" required>
+                <label for="tel">Telephone:</label>
+                <input id="tel" type="tel"  maxlength="15" required>
             </div>
 
             <div>
-                <label for="name">Email:</label>
-                <input id="name" type="text"  maxlength="15" required>
+                <label for="email">Email:</label>
+                <input id="email" type="email"  maxlength="30" required>
             </div>
 
             <div>
-                <label for="name">Website:</label>
-                <input id="name" type="text"  maxlength="15" required>
+                <label for="url">Website:</label>
+                <input id="url" type="url"  maxlength="20" required>
             </div>
 
             <div>
@@ -132,6 +163,85 @@ button:hover{
 
     </div>
 
+
+    <script>
+        const form = document.querySelector('form');
+        const trHead = document.querySelector('#head');
+        const conData = document.querySelector('#data');
+        const nameInput = document.querySelector('#name');
+        const addInput = document.querySelector('#add');
+        const telInput = document.querySelector('#tel');
+        const emailInput = document.querySelector('#email');
+        const urlInput = document.querySelector('#url');
+        const button = document.querySelector('button');
+
+
+        let db
+
+        window.onload = () => {
+            console.log("nah kan jalan");
+
+            let request = window.indexedDB.open('contacts', 1)
+
+            request.onerror = () => {
+                console.log('Database failed to open')
+            }
+
+            request.onsuccess = () => {
+                console.log('Database opened successfully')
+                db = request.result;
+                displayData();
+            }
+
+                // Handle database version upgrade and create the object store
+            request.onupgradeneeded = (e) => {
+                let db = e.target.result;
+                db.createObjectStore('contacts', { keyPath: 'id', autoIncrement: true });
+                console.log('Database setup complete');
+            };
+
+
+        form.onsubmit = (e) => {
+                e.preventDefault()
+                let newItem = { name: nameInput.value, address: addInput.value, telephone: telInput.value, email: emailInput.value, url: urlInput.value };
+            
+                let transaction = db.transaction(['contacts'], 'readwrite');
+                let objectStore = transaction.objectStore('contacts');
+                var request = objectStore.add(newItem)
+
+                request.onsuccess = () => {
+                    nameInput.value = '';
+                    addInput.value = '';
+                    telInput.value = '';
+                    emailInput.value = '';
+                    urlInput.value = '';
+                };
+
+                transaction.oncomplete = () => {
+                    console.log('Transaction completed: database modification finished.');
+                    displayData();
+                };
+
+                transaction.onerror = () => {
+                    console.log('Transaction not opened due to error');
+                };
+            }
+            
+
+
+
+            function displayData() {
+
+                console.log("bang bang, jalan gak bang")
+                let objectStore = db.transaction('contacts').objectStore('contacts');
+                
+
+                
+            }
+        }
+
+
+    </script>
 
     
 </body>
