@@ -77,6 +77,13 @@ while running:
 
 
 
+    color_button_width = 20
+    color_button_height = 20
+    black_color_button = pygame.draw.circle(toolbar, BLACK, (240, 25), color_button_width // 2)  # Black color button
+    red_color_button = pygame.draw.circle(toolbar, RED, (280, 25), color_button_width // 2)    # Red color button
+    yellow_color_button = pygame.draw.circle(toolbar, YELLOW, (320, 25), color_button_width // 2) # Yellow color button
+    blue_color_button = pygame.draw.circle(toolbar, BLUE, (360, 25), color_button_width // 2)   # Blue color button
+
 
 
 
@@ -91,7 +98,25 @@ while running:
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
             if event.pos[1] <= TOOLBAR_HEIGHT:
-                pass
+                pen_rect = pen_text.get_rect(topleft=(40, 20))
+                eraser_rect = eraser_text.get_rect(topleft=(80, 20))
+                decrease_rect = decrease_text.get_rect(topleft=(120, 20))
+                increase_rect = increase_text.get_rect(topleft=(160, 20))
+                clear_rect = clear_text.get_rect(topleft=(200, 20))
+
+                if pen_rect.collidepoint(event.pos):
+                    # Pen tool selected
+                    eraser_mode = False
+                elif eraser_rect.collidepoint(event.pos):
+                    # Eraser tool selected
+                    eraser_mode = True
+                elif decrease_rect.collidepoint(event.pos):
+                    # Decrease brush size
+                    brush_size = max(min_brush_size, brush_size - 1)
+                elif increase_rect.collidepoint(event.pos):
+                    # Increase brush size
+                    brush_size = min(max_brush_size, brush_size + 1)
+
             else:
                 drawing = True
                 last_pos = (event.pos[0], event.pos[1] - TOOLBAR_HEIGHT)  # Adjust last_pos

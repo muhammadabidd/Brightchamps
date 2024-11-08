@@ -235,7 +235,48 @@ header{
                 console.log("bang bang, jalan gak bang")
                 let objectStore = db.transaction('contacts').objectStore('contacts');
                 
+                objectStore.openCursor().onsuccess = (e) => {
+                    let cursor = e.target.result;
 
+                        if(cursor) {
+                        let tr = document.createElement('tr');
+                        let tdName = document.createElement('td'); 
+                        let tdAdd = document.createElement('td');
+                        let tdTel = document.createElement('td');
+                        let tdEmail = document.createElement('td');
+                        let tdUrl = document.createElement('td');
+
+                        tr.appendChild(tdName);
+                        tr.appendChild(tdAdd);
+                        tr.appendChild(tdTel);
+                        tr.appendChild(tdEmail);
+                        tr.appendChild(tdUrl);
+                        conData.appendChild(tr);
+                
+                        tdName.textContent = cursor.value.name
+                        tdAdd.textContent = cursor.value.address
+                        tdTel.textContent = cursor.value.telephone
+                        tdEmail.textContent = cursor.value.email
+                        tdUrl.textContent = cursor.value.url
+                        tr.setAttribute('data-contact-id', cursor.value.id);
+
+                        let deleteBtn = document.createElement('button');
+                        tr.appendChild(deleteBtn);
+                        deleteBtn.textContent = 'Delete';
+                        deleteBtn.onclick = deleteItem;
+                        cursor.continue();
+                        }
+
+                        else {
+                                if(!conData.firstChild) {
+                                let para = document.createElement('p');
+                                para.textContent = 'No contact stored.'
+                                conData.appendChild(para);
+                                }
+                                console.log('Notes all displayed');
+                            }
+
+                }
                 
             }
         }
