@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meme Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #meme {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 20px 0;
+    }
+    #meme img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    .text {
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 24px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    .top-text {
+        top: 10px;
+    }
+    .bottom-text {
+        bottom: 10px;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+    <h2>Meme Generator</h2>
+    <form id="memeForm">
+        <input type="text" id="topText" placeholder="Top Text" required>
+        <input type="text" id="imageUrl" placeholder="Image URL" required>
+        <input type="text" id="bottomText" placeholder="Bottom Text" required>
+        <button type="submit">Generate Meme</button>
+    </form>
+    <div id="meme" style="display: none;">
+        <img id="memeImage" src="" alt="Meme Image">
+        <div class="text top-text" id="memeTopText"></div>
+        <div class="text bottom-text" id="memeBottomText"></div>
+    </div>
+</div>
+
+<script>
+    const memeForm = document.getElementById('memeForm');
+    const memeImage = document.getElementById('memeImage');
+    const memeTopText = document.getElementById('memeTopText');
+    const memeBottomText = document.getElementById('memeBottomText');
+    const memeContainer = document.getElementById('meme');
+
+    memeForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get input values
+        const topText = document.getElementById('topText').value;
+        const imageUrl = document.getElementById('imageUrl').value;
+        const bottomText = document.getElementById('bottomText').value;
+
+        // Update meme content
+        memeImage.src = imageUrl;
+        memeTopText.textContent = topText;
+        memeBottomText.textContent = bottomText;
+
+        // Display the meme
+        memeContainer.style.display = 'block';
+    });
+</script>
+</body>
+</html>
