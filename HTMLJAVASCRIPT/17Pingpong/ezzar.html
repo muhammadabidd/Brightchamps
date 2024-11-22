@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+          canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ping Pong Game</h1>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+
+    <script>
+
+            const canvas = document.getElementById("gameCanvas");
+            const ctx = canvas.getContext("2d");
+
+            const paddleWidth = 10;
+        const paddleHeight = 100;
+        const ballSize = 10;
+
+        let player1Y = (canvas.height - paddleHeight) / 2;
+        let player2Y = (canvas.height - paddleHeight) / 2;
+
+        function drawRect(x, y, width, height, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
+
+         drawRect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight, "red");
+
+       
+
+    </script>
+    
+</body>
+</html>

@@ -65,6 +65,19 @@
     button:hover {
         background-color: #0056b3;
     }
+
+    input[type="text"] {
+    
+        width: 100%;
+        padding: 10px;
+        /* background-color: #007bff; */
+        /* color: #fff; */
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
     </style>
 </head>
 <body>
@@ -84,6 +97,34 @@
         </div>
     </div>
     
-    
+    <script>
+
+    const memeForm = document.getElementById('memeForm');
+    const memeImage = document.getElementById('memeImage');
+    const memeTopText = document.getElementById('memeTopText');
+    const memeBottomText = document.getElementById('memeBottomText');
+    const memeContainer = document.getElementById('meme');
+
+    memeForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+
+        const topText = document.getElementById('topText').value;
+        const imageUrl = document.getElementById('imageUrl').value;
+        const bottomText = document.getElementById('bottomText').value;
+
+        console.log(topText)
+        console.log(imageUrl)
+        console.log(bottomText)
+
+         // Update meme content
+         memeImage.src = imageUrl;
+        memeTopText.textContent = topText;
+        memeBottomText.textContent = bottomText;
+
+    })
+
+
+    </script>
 </body>
 </html>

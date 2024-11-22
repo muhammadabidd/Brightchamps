@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ping Pong Game</h1>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const paddleWidth = 10;
+        const paddleHeight = 100;
+        const ballSize = 10;
+
+        let player1Y = (canvas.height - paddleHeight) / 2;
+        let player2Y = (canvas.height - paddleHeight) / 2;
+
+        let ballX = canvas.width / 2;
+        let ballY = canvas.height / 2;
+        let ballSpeedX = 5;
+        let ballSpeedY = 3;
+
+        let player1Score = 0;
+        let player2Score = 0;
+
+        const paddleSpeed = 8;
+
+        function drawRect(x, y, width, height, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
+
+        function drawCircle(x, y, radius, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawText(text, x, y, color) {
+            ctx.fillStyle = color;
+            ctx.font = "30px Arial";
+            ctx.fillText(text, x, y);
+        }
+
+        function resetBall() {
+            ballX = canvas.width / 2;
+            ballY = canvas.height / 2;
+            ballSpeedX = -ballSpeedX;
+            ballSpeedY = Math.random() > 0.5 ? 3 : -3;
+        }
+
+        function updateGame() {
+            // Ball movement
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
+
+            // Ball collision with top and bottom walls
+            if (ballY <= 0 || ballY >= canvas.height - ballSize) {
+                ballSpeedY = -ballSpeedY;
+            }
+
+            // Ball collision with paddles
+            if (
+                ballX <= paddleWidth &&
+                ballY > player1Y &&
+                ballY < player1Y + paddleHeight
+            ) {
+                ballSpeedX = -ballSpeedX;
+            }
+            if (
+                ballX >= canvas.width - paddleWidth - ballSize &&
+                ballY > player2Y &&
+                ballY < player2Y + paddleHeight
+            ) {
+                ballSpeedX = -ballSpeedX;
+            }
+
+            // Scoring
+            if (ballX <= 0) {
+                player2Score++;
+                resetBall();
+            }
+            if (ballX >= canvas.width) {
+                player1Score++;
+                resetBall();
+            }
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw paddles, ball, and scores
+            drawRect(0, player1Y, paddleWidth, paddleHeight, "blue");
+            drawRect(canvas.width - paddleWidth, player2Y, paddleWidth, paddleHeight, "red");
+            drawCircle(ballX, ballY, ballSize, "green");
+            drawText(player1Score, canvas.width / 4, 50, "blue");
+            drawText(player2Score, (canvas.width / 4) * 3, 50, "red");
+        }
+
+        function handleKeyDown(event) {
+            switch (event.key) {
+                case "w":
+                    player1Y = Math.max(0, player1Y - paddleSpeed);
+                    break;
+                case "s":
+                    player1Y = Math.min(canvas.height - paddleHeight, player1Y + paddleSpeed);
+                    break;
+                case "ArrowUp":
+                    player2Y = Math.max(0, player2Y - paddleSpeed);
+                    break;
+                case "ArrowDown":
+                    player2Y = Math.min(canvas.height - paddleHeight, player2Y + paddleSpeed);
+                    break;
+            }
+        }
+
+        function gameLoop() {
+            updateGame();
+            requestAnimationFrame(gameLoop);
+        }
+
+        document.addEventListener("keydown", handleKeyDown);
+
+        gameLoop();
+
+    </script>
+    <script src="pingpong.js">
+
+    </script>
+</body>
+
+</html>
