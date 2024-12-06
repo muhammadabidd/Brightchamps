@@ -73,7 +73,7 @@ asteroid_x =  random.randint(30, screen_width - 30)
 asteroid_scale = random.uniform(0.2, 0.3)
 asteroid = Asteroid(asteroid_x,  -int(asteroid_height * asteroid_scale), asteroid_img, asteroid_scale)
 
-
+asteroids = []
 
 
 
@@ -108,12 +108,28 @@ while game_running:
 
     update_background()
 
+    if random.randint(0, 120) < 2:
+        asteroid_x = random.randint(30, screen_width - 30)  # Swap the arguments here
+        asteroid_scale = random.uniform(0.2, 0.3)
+        asteroid = Asteroid(asteroid_x, -int(asteroid_height * asteroid_scale), asteroid_img, asteroid_scale)
+        asteroids.append(asteroid)
+        print(len(asteroids))
+
+    for asteroid in asteroids:
+        asteroid.move(1)
+        asteroid_rect = pygame.Rect(asteroid.x, asteroid.y, asteroid.image.get_width(), asteroid.image.get_height())
+        asteroid.draw(window)
+
+        # Check for collision with the spaceship using colliderect()
+        if spaceship_rect.colliderect(asteroid_rect):
+            close_game()
+    
+
 
    
 
 
-    asteroid.draw(window)
-    asteroid.move(0.8)
+
 
 
     pygame.display.update()
