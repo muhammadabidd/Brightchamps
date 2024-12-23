@@ -47,6 +47,7 @@ class Snake:
         self.y = screen_height/2
         self.x_speed = GRID_SIZE
         self.y_speed = 0
+        self.body = [(self.x, self.y)]
 
 
 
@@ -55,7 +56,13 @@ class Snake:
         self.y = self.y + self.y_speed
 
 
+        newhead = (self.x, self.y)
+
+        self.body.insert(0, newhead)
+
+
     def draw(self):
+         
          pygame.draw.rect(screen, black, (self.x, self.y, GRID_SIZE, GRID_SIZE))
 
     
