@@ -30,24 +30,54 @@ game_over = False
 
 class Snake:
 
+   
+
     def __init__(self):
-        self.x = screen_width/2
-        self.y = screen_height/2
+
+        self.head = (screen_width/2, screen_height/2)
         self.x_speed = GRID_SIZE
         self.y_speed = 0
+        self.body = []
+        self.max_length = 10
 
     def move(self):
-        self.x = self.x + self.x_speed
-        self.y = self.y + self.y_speed
+
+        self.head = (self.head[0] + self.x_speed,  self.head[1] + self.y_speed)
+
 
 
     def drawsnakebody(self):
-        pygame.draw.rect(screen, black, (self.x, self.y, GRID_SIZE, GRID_SIZE))
+        for box in self.body:
+            pygame.draw.rect(screen, black, (box[0], box[1], GRID_SIZE, GRID_SIZE))
 
 
     def change_direction(self, x_speed, y_speed):
             self.y_speed = y_speed
             self.x_speed = x_speed
+
+    def teleportfromwall(self):
+        old_x, old_y = self.head
+        if self.head[0]+ GRID_SIZE > screen_width:
+            self.head = (0, old_y)
+
+        elif self.head[0] < 0 : 
+            self.head = (screen_width - GRID_SIZE, old_y)
+
+        elif self.head[1] + GRID_SIZE > screen_height :
+            self.head = (old_x, 0)
+        elif self.head[1]  < 0 :
+            self.head = (old_x,screen_height - GRID_SIZE)
+
+
+    def takenotes(self):
+        self.body.append(self.head)
+        print(self.body)
+
+        if len(self.body) > self.max_length:
+            self.body.pop(0)
+            
+
+        
 
 
 
@@ -84,8 +114,10 @@ while not game_over:
     screen.fill(white)
 
     drawGrid()
-    mysnake.drawsnakebody()
     mysnake.move()
+    mysnake.teleportfromwall()
+    mysnake.takenotes()
+    mysnake.drawsnakebody()
 
 
 
