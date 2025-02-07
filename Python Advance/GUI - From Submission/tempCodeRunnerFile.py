@@ -1,1 +1,1 @@
-black
+ntry1.delete(0, tk.END)
